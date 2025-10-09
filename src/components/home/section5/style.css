@@ -1,0 +1,552 @@
+   .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Podcast Hero Section */
+        .podcast-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .podcast-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* Video/Image Section */
+        .video-container {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .video-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.6));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 215, 0, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: #FFD700;
+        }
+
+        .play-button svg {
+            width: 40px;
+            height: 40px;
+            fill: #1a1a1a;
+            margin-right: -4px;
+        }
+
+        .episode-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .episode-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .episode-subtitle {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .episode-subtitle .yellow {
+            color: #FFD700;
+        }
+
+        .episode-subtitle .black {
+            color: #1a1a1a;
+        }
+
+        /* Content Section */
+        .content-container {
+            position: relative;
+        }
+
+        .shape-background {
+            position: absolute;
+            top: -100px;
+            left: -200px;
+            width: 800px;
+            height: 600px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 50% 50% 50% 0%;
+            z-index: 0;
+            opacity: 0.95;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 60px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo-badge {
+            background: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1a1a1a;
+        }
+
+        .main-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .podcast-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .podcast-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: #1a1a1a;
+            stroke-width: 2;
+        }
+
+        .subtitle-text {
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 40px;
+            text-align: right;
+        }
+
+        .season-title {
+            font-size: 72px;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .episode-info {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .episode-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .episode-name {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .episode-description {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .watch-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .watch-button:hover {
+            background: #2d2d2d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .watch-button svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Crypto Prices Section */
+        .crypto-section {
+            padding: 80px 0;
+            background: #fafbfc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .crypto-logo {
+            background: #FFD700;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .crypto-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .crypto-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: #1a1a1a;
+            stroke-width: 2;
+        }
+
+        .section-subtitle {
+            color: #9ca3af;
+            font-size: 15px;
+        }
+
+        /* Carousel */
+        .carousel-wrapper {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ffffff;
+            border: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: #f9fafb;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-nav.prev {
+            right: -26px;
+        }
+
+        .carousel-nav.next {
+            left: -26px;
+        }
+
+        .carousel-nav svg {
+            width: 24px;
+            height: 24px;
+            fill: #1a1a1a;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            padding: 0 60px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Crypto Card */
+        .crypto-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 28px;
+            min-width: 240px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .crypto-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .coin-info {
+            text-align: right;
+        }
+
+        .coin-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .coin-pair {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .coin-icon {
+            width: 40px;
+            height: 40px;
+            background: #f3f4f6;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coin-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #6b7280;
+            stroke-width: 2;
+        }
+
+        .price-info {
+            margin-bottom: 20px;
+        }
+
+        .price-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .price-change.positive {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .price-change.negative {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .price-amount {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+
+        .price-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .chart-container {
+            height: 80px;
+            position: relative;
+        }
+
+        .chart-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Category Title */
+        .category-title {
+            text-align: center;
+            font-size: 18px;
+            color: #9ca3af;
+            margin-bottom: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .podcast-wrapper {
+                gap: 40px;
+            }
+
+            .content-wrapper {
+                padding: 40px;
+            }
+
+            .season-title {
+                font-size: 56px;
+            }
+
+            .episode-name {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .podcast-wrapper {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .shape-background {
+                width: 600px;
+                height: 400px;
+                top: -50px;
+                left: -100px;
+            }
+
+            .carousel-container {
+                padding: 0 40px;
+            }
+
+            .carousel-nav.prev {
+                right: -20px;
+            }
+
+            .carousel-nav.next {
+                left: -20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .podcast-section,
+            .crypto-section {
+                padding: 60px 0;
+            }
+
+            .content-wrapper {
+                padding: 30px 20px;
+            }
+
+            .season-title {
+                font-size: 42px;
+            }
+
+            .episode-name {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .crypto-card {
+                min-width: 200px;
+                padding: 20px;
+            }
+
+            .episode-badge {
+                padding: 16px 24px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .episode-title {
+                font-size: 16px;
+            }
+
+            .episode-subtitle {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shape-background {
+                display: none;
+            }
+
+            .content-wrapper {
+                background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+                border-radius: 24px;
+            }
+        }

@@ -1,0 +1,289 @@
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .logo-badge {
+            background: #FFD700;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .price-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .price-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: #1a1a1a;
+            stroke-width: 2;
+        }
+
+        .section-subtitle {
+            color: #9ca3af;
+            font-size: 15px;
+        }
+
+        /* Table Container */
+        .table-container {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Table Header */
+        .price-table thead {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+        }
+
+        .price-table thead th {
+            padding: 18px 16px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .price-table thead th:first-child {
+            border-left: none;
+        }
+
+        /* Table Body */
+        .price-table tbody tr {
+            border-bottom: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+        }
+
+        .price-table tbody tr:hover {
+            background: #f9fafb;
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .price-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .price-table tbody td {
+            padding: 20px 16px;
+            text-align: center;
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        /* Row Number */
+        .row-number {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        /* Crypto Info */
+        .crypto-info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .crypto-details {
+            text-align: right;
+        }
+
+        .crypto-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .crypto-symbol {
+            font-size: 11px;
+            color: #9ca3af;
+            text-transform: uppercase;
+        }
+
+        .crypto-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .crypto-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        /* Price */
+        .price {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* Volume */
+        .volume {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Market Cap */
+        .market-cap {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Change Percentage */
+        .change {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .change.positive {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .change.negative {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* Chart */
+        .chart-cell {
+            padding: 12px 16px !important;
+        }
+
+        .mini-chart {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mini-chart svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Action Icons */
+        .action-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .action-icon {
+            width: 32px;
+            height: 32px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-icon:hover {
+            background: #e5e7eb;
+            transform: scale(1.1);
+        }
+
+        .action-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: #6b7280;
+            stroke-width: 2;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .price-table {
+                font-size: 12px;
+            }
+
+            .price-table thead th,
+            .price-table tbody td {
+                padding: 14px 12px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .table-container {
+                overflow-x: auto;
+            }
+
+            .price-table {
+                min-width: 1000px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 16px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .table-container {
+                border-radius: 16px;
+            }
+        }
+
+        /* Loading animation */
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
