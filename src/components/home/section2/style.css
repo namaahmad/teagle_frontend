@@ -1,328 +1,411 @@
- 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 40px;
-        }
         .section-title {
-            display: flex;
-            align-items: center;
             font-size: 1.5rem;
             font-weight: 700;
             color: #222;
-            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.25rem;
         }
-        .section-title .icon {
+
+        .section-title .fa-arrow-left {
+            font-size: 1rem;
+            margin-left: 0.5rem;
             color: #FFD600;
-            font-size: 1.2rem;
-            margin-left: 8px;
         }
-        .section-title .circle-arrow {
-            color: #222;
+
+        .section-title .fa-globe {
             font-size: 1.1rem;
-            margin-right: 8px;
+            margin-left: 0.5rem;
+            color: #222;
         }
+
+        .section-title .fa-arrow-left {
+            margin-right: 0.25rem;
+        }
+
+        .section-title .yellow-dot {
+            color: #FFD600;
+            font-size: 1.1rem;
+            margin-left: 0.3rem;
+        }
+
         .section-subtitle {
             color: #bdbdbd;
             font-size: 1rem;
-            margin-bottom: 32px;
-            margin-right: 2px;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
         }
-        .market-box {
-            background: #222;
+
+        .market-card {
+            background: #232323;
             border-radius: 36px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-            padding: 32px 40px 32px 32px;
-            max-width: 900px;
-            margin: 0 auto 48px auto;
-            position: relative;
-        }
-        .market-box-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px;
-        }
-        .market-box-header .section-title {
+            box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.18);
+            padding: 2.2rem 2.5rem 2.2rem 2.5rem;
             color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 0;
+            position: relative;
+            margin-bottom: 2.5rem;
         }
-        .market-box-header .icon {
-            color: #FFD600;
-            font-size: 1rem;
-            margin-left: 8px;
-        }
-        .market-box-header .date {
+
+        .market-card .date {
+            position: absolute;
+            top: 1.5rem;
+            left: 2.5rem;
             color: #bdbdbd;
             font-size: 0.95rem;
             font-weight: 400;
         }
-        .market-box-content {
-            color: #fff;
-            font-size: 1.05rem;
-            line-height: 2.1;
-            margin-bottom: 18px;
-        }
-        .market-box-content strong {
+
+        .market-card .card-title {
+            font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #fff;
         }
-        .market-box-footer {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+
+        .market-card .card-text {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 2.1;
         }
-        .market-box-footer .more-info {
+
+        .market-card .more-info {
             color: #FFD600;
             font-size: 1rem;
             font-weight: 400;
             text-decoration: none;
-            transition: text-decoration 0.2s;
+            transition: color 0.2s;
         }
-        .market-box-footer .more-info:hover {
-            text-decoration: underline;
+
+        .market-card .more-info:hover {
+            color: #ffb300;
         }
-        .market-box-sidebar {
+
+        .brokers-sidebar {
+            padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+            color: #fff;
+            min-width: 320px;
+            max-width: 370px;
             position: absolute;
-            left: -260px;
+            right: -60px;
             top: 0;
-            height: 100%;
+            z-index: 2;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            margin-top: -22px;
+        }
+
+        .brokers-sidebar .active {
+            background: #232323;
+            border-radius: 36px;
+            padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+            color: #fff;
+            width: 294px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            height: 50px;
+        }
+
+        .brokers-sidebar .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            display: flex;
             justify-content: flex-start;
-            gap: 18px;
         }
-        .market-box-sidebar {
-            width: 220px;
-            padding-top: 32px;
+
+        .brokers-sidebar .fa-arrow-left {
+            color: #FFD600;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+             margin-right: 0.5rem;
         }
-        .market-box-sidebar .sidebar-btn {
-            background: #bdbdbd;
+
+        .brokers-sidebar .sidebar-btn {
+            background: #6d6d6d;
             color: #fff;
             border: none;
             border-radius: 16px;
-            font-size: 1.05rem;
-            font-family: inherit;
-            padding: 12px 24px;
-            margin-bottom: 0;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: right;
             display: flex;
             align-items: center;
-            gap: 10px;
-            cursor: pointer;
             transition: background 0.2s;
-        }
-        .market-box-sidebar .sidebar-btn.active {
-            background: #fff;
-            color: #222;
-        }
-        .market-box-sidebar .sidebar-btn .icon {
-            color: #bdbdbd;
-            font-size: 1rem;
-        }
-        .market-box-sidebar .sidebar-btn.active .icon {
-            color: #FFD600;
-        }
-        .market-box-sidebar .sidebar-title {
-            background: #222;
-            color: #fff;
-            border-radius: 24px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 12px 24px;
-            margin-bottom: 18px;
+            max-width: 260px;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
-        .market-box-sidebar .sidebar-title .icon {
-            color: #FFD600;
-            font-size: 1rem;
+
+        .brokers-sidebar .sidebar-btn:last-child {
+            margin-bottom: 0;
         }
+
+        .brokers-sidebar .sidebar-btn .fa {
+            margin-left: 0.7rem;
+            font-size: 1.1rem;
+        }
+
+        .brokers-sidebar .sidebar-btn:hover {
+            background: #FFD600;
+            color: #232323;
+        }
+
+        .main-content-wrapper {
+            position: relative;
+            margin-top: 2.5rem;
+            margin-bottom: 4.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .market-card {
+            width: 100%;
+            max-width: 55vw;
+        }
+
         @media (max-width: 1200px) {
-            .market-box-sidebar {
-                display: none;
+            .main-content-wrapper {
+                flex-direction: column;
+                align-items: center;
             }
-            .market-box {
-                padding: 32px 24px;
+
+            .market-card {
+                margin-right: 0;
+                margin-top: 2.5rem;
+            }
+
+            .brokers-sidebar {
+                position: static;
+                margin-bottom: 1.5rem;
             }
         }
-        /* Section 2 */
-        .section2 {
-            background: linear-gradient(180deg, #fff 80%, #f7f7f7 100%);
-            padding: 60px 0 80px 0;
-            margin-top: -40px;
+
+        @media (max-width: 768px) {
+            .market-card {
+                padding: 1.2rem 1rem 1.2rem 1rem;
+                max-width: 100%;
+            }
+
+            .brokers-sidebar {
+                padding: 1.2rem 1rem 1.2rem 1rem;
+                min-width: 0;
+                max-width: 100%;
+            }
         }
-        .section2 .container {
-            padding-top: 0;
+
+        .section-divider {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(180deg, #fff 60%, #f8f8f8 100%);
+            border: none;
+            margin: 0 0 2.5rem 0;
         }
-        .section2-title {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 8px;
+
+        .brokers-section {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
         }
-        .section2-title .icon {
-            color: #FFD600;
-            font-size: 1.2rem;
-            margin-left: 8px;
-        }
-        .section2-title .circle-arrow {
-            color: #222;
-            font-size: 1.1rem;
-            margin-right: 8px;
-        }
-        .section2-subtitle {
-            color: #bdbdbd;
-            font-size: 1rem;
-            margin-bottom: 32px;
-            margin-right: 2px;
-        }
-        .brokers-carousel {
+
+        .brokers-carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
-            margin-top: 32px;
         }
+
         .carousel-arrow {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             background: #fff;
             border-radius: 50%;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #bdbdbd;
             cursor: pointer;
-            transition: box-shadow 0.2s;
+            z-index: 2;
             border: none;
+            position: relative;
+            transition: background 0.2s, color 0.2s;
         }
+
         .carousel-arrow:hover {
-            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-            color: #FFD600;
+            background: #FFD600;
+            color: #232323;
         }
+
+        .carousel-arrow.left {
+            margin-left: 1.2rem;
+        }
+
+        .carousel-arrow.right {
+            margin-right: 1.2rem;
+        }
+
+        .brokers-cards-row {
+            display: flex;
+            gap: 1.2rem;
+            width: 100%;
+            justify-content: center;
+        }
+
         .broker-card {
             background: #fff;
-            border-radius: 24px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            width: 210px;
-            min-width: 210px;
-            padding: 24px 18px 18px 18px;
+            border: 1.5px solid #ededed;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+            padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, border 0.2s;
         }
-        .broker-card:hover {
-            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-        }
-        .broker-card .card-chat {
+
+        .broker-card .fa-comment-alt {
             position: absolute;
-            top: 18px;
-            left: 18px;
+            top: 1.1rem;
+            left: 1.1rem;
             color: #bdbdbd;
             font-size: 1.1rem;
         }
+
         .broker-card .broker-logo {
             width: 80px;
             height: 40px;
-            margin-bottom: 18px;
-            object-fit: contain;
+            margin-bottom: 1.2rem;
         }
+
         .broker-card .broker-title {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #222;
-            margin-bottom: 2px;
+            color: #232323;
+            margin-bottom: 0.2rem;
+            text-align: center;
         }
+
         .broker-card .broker-subtitle {
             font-size: 0.95rem;
             color: #bdbdbd;
-            margin-bottom: 12px;
+            margin-bottom: 1.1rem;
+            text-align: center;
         }
+
         .broker-card .broker-info {
             width: 100%;
             display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-bottom: 18px;
+            justify-content: space-between;
+            margin-bottom: 0.7rem;
         }
-        .broker-card .broker-info-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.95rem;
-            color: #222;
-        }
-        .broker-card .broker-info-row .icon {
+
+        .broker-card .broker-info .fa-fire {
             color: #FFD600;
-            font-size: 0.95rem;
-            margin-left: 4px;
+            font-size: 1.1rem;
+            margin-left: 0.3rem;
         }
-        .broker-card .broker-info-row .label {
+
+        .broker-card .broker-info .info-label {
+            font-size: 0.95rem;
             color: #bdbdbd;
+        }
+
+        .broker-card .broker-info .info-value {
             font-size: 0.95rem;
-            margin-left: 2px;
+            color: #232323;
+            font-weight: 500;
         }
+
         .broker-card .broker-actions {
-            display: flex;
-            gap: 8px;
             width: 100%;
-            justify-content: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
         }
-        .broker-card .broker-btn {
+
+        .broker-card .broker-actions .btn {
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.35rem 0.9rem;
             border: 1.5px solid #FFD600;
             background: #fff;
             color: #FFD600;
-            font-size: 0.95rem;
-            font-weight: 400;
-            border-radius: 12px;
-            padding: 6px 16px;
-            cursor: pointer;
             transition: background 0.2s, color 0.2s;
-            outline: none;
         }
-        .broker-card .broker-btn.active,
-        .broker-card .broker-btn:hover {
+
+        .broker-card .broker-actions .btn.broker-site {
             background: #FFD600;
-            color: #fff;
+            color: #232323;
+            border: 1.5px solid #FFD600;
         }
-        .broker-card .broker-btn.black {
-            border: 1.5px solid #222;
-            background: #222;
-            color: #fff;
+
+        .broker-card .broker-actions .btn:hover {
+            background: #FFD600;
+            color: #232323;
         }
-        @media (max-width: 900px) {
-            .brokers-carousel {
-                gap: 12px;
+
+        .broker-card .broker-actions .btn.broker-site:hover {
+            background: #fff;
+            color: #FFD600;
+        }
+
+        @media (max-width: 1200px) {
+            .brokers-cards-row {
+                gap: 0.7rem;
             }
+
             .broker-card {
-                width: 160px;
-                min-width: 160px;
-                padding: 18px 8px 12px 8px;
+                width: 170px;
+                min-width: 170px;
+                max-width: 170px;
+                padding: 1.1rem 0.7rem 1rem 0.7rem;
             }
         }
-        @media (max-width: 700px) {
-            .container {
-                max-width: 98vw;
-                padding: 0 4vw;
-            }
-            .market-box {
-                padding: 24px 8px;
-            }
-            .brokers-carousel {
+
+        @media (max-width: 992px) {
+            .brokers-cards-row {
                 flex-wrap: wrap;
-                gap: 12px;
+                gap: 1rem;
             }
+
             .broker-card {
-                width: 98vw;
-                min-width: 98vw;
-                margin-bottom: 12px;
+                width: 45vw;
+                min-width: 140px;
+                max-width: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brokers-cards-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+            }
+
+            .broker-card {
+                width: 90vw;
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            .carousel-arrow {
+                display: none;
             }
         }
