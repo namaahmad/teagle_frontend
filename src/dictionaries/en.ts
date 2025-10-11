@@ -1,6 +1,6 @@
 
 export default {
-  titleApp: 'Enrgy Plateform',
+  titleApp: 'Nirmate Site',
   home: "",
   about: "",
   services: "",

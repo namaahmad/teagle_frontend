@@ -5,7 +5,10 @@ import useVerticalScrollEvent from '@/hooks/useVerticalScrollEvent'
 import { SitesettingDataDto, SiteSettingDto } from '@/dto'
 import { useI18n } from '@/dictionaries/client'
 import { useCurrentLocale } from '@/dictionaries/client'
-
+import logo from "@/components/img/logo.png"
+import Image from 'next/image';
+import moment from "moment-jalaali"
+moment.loadPersian({ usePersianDigits: true,dialect: 'persian-modern' });
 interface IProps {
   data?: SiteSettingDto
 }
@@ -46,9 +49,9 @@ const Header = (props: IProps) => {
         </div>
         <div className="top-bar-left">
           <div className="date-info">
-            <span>چهارشنبه</span>
-            <span>۱۷سپتامبر ۲۰۲۵</span>
-            <span>۱۴۰۴ / ۶ / ۲۶</span>
+            <span>{moment().format('dddd')}</span>
+            <span>{moment().format("YYYY/MM/DD")}</span>
+            <span>{moment().format("jYYYY/jMM/jDD")}</span>
           </div>
         </div>
       </div>
@@ -79,11 +82,7 @@ const Header = (props: IProps) => {
           </ul>
 
           <div className="logo-header">
-            <svg width="80" height="60" viewBox="0 0 100 80">
-              <path d="M10,40 Q10,10 40,10 L60,10 Q90,10 90,40 Q90,70 60,70 L40,70 Q10,70 10,40 Z" fill="#1a1a1a" transform="rotate(-15 50 40)" />
-              <circle cx="45" cy="40" r="18" fill="#ffc107" />
-              <circle cx="45" cy="40" r="8" fill="#1a1a1a" />
-            </svg>
+            <Image src={logo} alt={translate("titleApp")} width={60} height={40} />
           </div>
         </div>
       </nav>

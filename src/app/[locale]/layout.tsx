@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import { ReactElement, ReactNode, Suspense, useEffect } from "react";
-import '@/styles/layout.css'
+import './layout.css'
 import { getCurrentLocale, getI18n } from "@/dictionaries/server";
 import { ApiServices } from "./api/ApiServices";
 import { BaseResponse, SiteSettingDto } from "@/dto";

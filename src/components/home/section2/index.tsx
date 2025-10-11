@@ -11,7 +11,7 @@ const Section2Component = (props: IProps) => {
 
     const local = useCurrentLocale()
     return (
-        <section>
+        <section >
             <div className="container">
                 <div className="section-title">
                     <span className="icon">

@@ -100,16 +100,7 @@ const Section1Component = (props: IProps) => {
             </div>
 
 
-            <div className="header-section">
-                <div className="header-content">
-                    <h1 className="registration-title">!ثبت نام کن</h1>
-                    <p className="subtitle">با ثبت نام در تیگل معنوی توکل بازارهای جهانی فعالیت کنی</p>
-                    <form className="email-form">
-                        <button type="submit" className="submit-btn">تایید</button>
-                        <input type="email" className="email-input" placeholder="ایمیل" required />
-                    </form>
-                </div>
-            </div>
+           
         </section>
     )
 }

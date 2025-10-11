@@ -148,15 +148,15 @@
             }
         }
         /* Section 2 */
-        .section2 {
+        .section3 {
             background: linear-gradient(180deg, #fff 80%, #f7f7f7 100%);
             padding: 60px 0 80px 0;
             margin-top: -40px;
         }
-        .section2 .container {
+        .section3 .container {
             padding-top: 0;
         }
-        .section2-title {
+        .section3-title {
             display: flex;
             align-items: center;
             font-size: 1.5rem;
@@ -164,17 +164,17 @@
             color: #222;
             margin-bottom: 8px;
         }
-        .section2-title .icon {
+        .section3-title .icon {
             color: #FFD600;
             font-size: 1.2rem;
             margin-left: 8px;
         }
-        .section2-title .circle-arrow {
+        .section3-title .circle-arrow {
             color: #222;
             font-size: 1.1rem;
             margin-right: 8px;
         }
-        .section2-subtitle {
+        .section3-subtitle {
             color: #bdbdbd;
             font-size: 1rem;
             margin-bottom: 32px;

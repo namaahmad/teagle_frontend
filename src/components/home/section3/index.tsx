@@ -12,9 +12,9 @@ const Section3Component = (props: IProps) => {
     const local = useCurrentLocale()
     return (
         <section>
-            <div className="section2">
+            <div className="section3">
                 <div className="container">
-                    <div className="section2-title">
+                    <div className="section3-title">
                         <span className="icon">
                             <i className="fas fa-chevron-left">
                             </i>
@@ -25,7 +25,7 @@ const Section3Component = (props: IProps) => {
                             </i>
                         </span>
                     </div>
-                    <div className="section2-subtitle">
+                    <div className="section3-subtitle">
                         تمامی خدمات ذکر شده با قیمت‌های استثنایی عرضه می‌شود.
                     </div>
                     <div className="brokers-carousel">
@@ -280,9 +280,9 @@ const Section3Component = (props: IProps) => {
                     </div>
                 </div>
             </div>
-            <div className="section2">
+            <div className="section3">
                 <div className="container">
-                    <div className="section2-title">
+                    <div className="section3-title">
                         <span className="icon">
                             <i className="fas fa-chevron-left">
                             </i>
@@ -293,7 +293,7 @@ const Section3Component = (props: IProps) => {
                             </i>
                         </span>
                     </div>
-                    <div className="section2-subtitle">
+                    <div className="section3-subtitle">
                         تمامی خدمات ذکر شده با قیمت‌های استثنایی عرضه می‌شود.
                     </div>
                     <div className="brokers-carousel">

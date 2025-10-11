@@ -13,16 +13,16 @@ const Section9Component = (props: IProps) => {
     return (
         <section className="section9">
             <div className="container9">
-                <div className="header-section">
-                    <div className="header-content9">
-                        <div className="header-title">
+                <div className="header9-section">
+                    <div className="header9-content9">
+                        <div className="header9-title">
                             <span>
                                 از زبان جامعه نیکگل
                             </span>
                             <i className="fas fa-globe">
                             </i>
                         </div>
-                        <div className="header-tabs">
+                        <div className="header9-tabs">
                             <button className="all selected">
                                 همه
                             </button>
@@ -62,7 +62,7 @@ const Section9Component = (props: IProps) => {
                 <div className="testimonials-section">
                     <div className="testimonials-wrapper">
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -79,7 +79,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -96,7 +96,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -113,7 +113,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -130,7 +130,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -147,7 +147,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -164,7 +164,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -181,7 +181,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>
@@ -198,7 +198,7 @@ const Section9Component = (props: IProps) => {
                             </div>
                         </div>
                         <div className="testimonial-card">
-                            <div className="testimonial-header">
+                            <div className="testimonial-header9">
                                 <span className="testimonial-role">
                                     بروکر
                                 </span>

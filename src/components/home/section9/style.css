@@ -14,7 +14,7 @@
        padding: 0;
    }
 
-   .header-section {
+   .header9-section {
        width: 100%;
        padding-top: 60px;
        padding-bottom: 0;
@@ -24,33 +24,34 @@
        box-sizing: border-box;
    }
 
-   .header-content9 {
+   .header9-content9 {
        max-width: 95vw;
        margin: 0 auto;
        position: relative;
        z-index: 2;
+       direction: ltr;
    }
 
-   .header-title {
+   .header9-title {
        display: flex;
        align-items: center;
        justify-content: flex-end;
        margin-bottom: 32px;
    }
 
-   .header-title i {
+   .header9-title i {
        font-size: 20px;
        margin-left: 8px;
        color: #222;
    }
 
-   .header-title span {
+   .header9-title span {
        font-size: 22px;
        font-weight: 700;
        color: #222;
    }
 
-   .header-tabs {
+   .header9-tabs {
        display: flex;
        align-items: center;
        justify-content: flex-end;
@@ -58,7 +59,7 @@
        margin-bottom: 32px;
    }
 
-   .header-tabs button {
+   .header9-tabs button {
        font-family: inherit;
        font-size: 15px;
        border: none;
@@ -72,23 +73,23 @@
        transition: background 0.2s, color 0.2s;
    }
 
-   .header-tabs button.selected {
+   .header9-tabs button.selected {
        background: #222;
        color: #fff;
        font-weight: 700;
    }
 
-   .header-tabs button.yellow {
+   .header9-tabs button.yellow {
        background: #ffd600;
        color: #222;
        font-weight: 700;
    }
 
-   .header-tabs button:active {
+   .header9-tabs button:active {
        filter: brightness(0.95);
    }
 
-   .header-tabs .all {
+   .header9-tabs .all {
        margin-right: 8px;
    }
 
@@ -201,7 +202,7 @@
        transition: box-shadow 0.2s;
    }
 
-   .testimonial-header {
+   .testimonial-header9 {
        display: flex;
        align-items: center;
        margin-bottom: 10px;
@@ -246,7 +247,7 @@
 
    @media (max-width: 1100px) {
 
-       .header-content,
+       .header9-content,
        .testimonials-wrapper {
            width: 98vw;
        }
@@ -272,7 +273,7 @@
            gap: 18px;
        }
 
-       .header-content {
+       .header9-content {
            width: 98vw;
        }
 
@@ -280,7 +281,7 @@
            width: 98vw;
        }
 
-       .header-title span {
+       .header9-title span {
            font-size: 18px;
        }
    }

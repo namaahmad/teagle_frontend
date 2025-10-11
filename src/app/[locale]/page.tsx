@@ -13,6 +13,9 @@ import Section6Component from '@/components/home/section6';
 import Section7Component from '@/components/home/section7';
 import Section8Component from '@/components/home/section8';
 import Section9Component from '@/components/home/section9';
+import Section10Component from '@/components/home/section10';
+import Section11Component from '@/components/home/section11';
+import Section12Component from '@/components/home/section12';
 
 interface IProps {
   params: Promise<{ locale: string }>
@@ -59,6 +62,9 @@ export default async function HomePage(props: IProps) {
       <Section7Component />
       <Section8Component />
       <Section9Component />
+      <Section10Component />
+      <Section11Component />
+      <Section12Component />
     </>
   )
 }

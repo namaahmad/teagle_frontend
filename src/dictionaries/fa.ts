@@ -1,6 +1,6 @@
 
 export default {
-    titleApp: 'تدبیر انرژی انتخاب',
+    titleApp: 'تیگل',
     home: "خانه",
     about: "درباره ما",
     services: "خدمات",
