@@ -29,12 +29,7 @@
             margin-left: 0.3rem;
         }
 
-        .section-subtitle {
-            color: #bdbdbd;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 2.5rem;
-        }
+      
 
         .market-card {
             background: #232323;
@@ -218,7 +213,6 @@
         .brokers-carousel-wrapper {
             position: relative;
             width: 100%;
-            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -269,9 +263,7 @@
             border-radius: 20px;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
             padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-            width: 200px;
-            min-width: 200px;
-            max-width: 200px;
+            min-width: 260px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -341,7 +333,7 @@
 
         .broker-card .broker-actions .btn {
             border-radius: 12px;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 500;
             padding: 0.35rem 0.9rem;
             border: 1.5px solid #FFD600;

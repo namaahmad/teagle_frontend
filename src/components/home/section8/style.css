@@ -1,7 +1,5 @@
-        .container {
-            width: 1200px;
-            margin: 0 auto;
-        }
+
+
         .top-nav {
             margin-top: 48px;
             margin-bottom: 32px;
@@ -9,6 +7,7 @@
             flex-direction: column;
             align-items: flex-end;
         }
+
         .top-nav-row {
             display: flex;
             align-items: center;
@@ -16,6 +15,7 @@
             font-weight: 700;
             color: #222;
         }
+
         .top-nav-row .back-btn {
             background: #FFD600;
             border-radius: 6px;
@@ -28,58 +28,70 @@
             font-size: 16px;
             color: #222;
         }
+
         .top-nav-row .cube-icon {
             margin-right: 8px;
             font-size: 18px;
             color: #222;
         }
+
         .top-nav-desc {
             font-size: 16px;
             color: #bdbdbd;
             margin-top: 4px;
             font-weight: 400;
         }
+
         .courses-row {
             display: flex;
             gap: 32px;
             justify-content: center;
             margin-bottom: 64px;
         }
+
         .course-card {
             background: linear-gradient(180deg, #222 60%, #FFD600 100%);
             border-radius: 16px;
             width: 420px;
             min-height: 380px;
-            padding: 40px 32px 32px 32px;
+            padding: 70px 32px 32px 32px;
             box-sizing: border-box;
             position: relative;
-            box-shadow: 0 4px 24px rgba(34,34,34,0.08);
+            box-shadow: 0 4px 24px rgba(34, 34, 34, 0.08);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
+
         .course-title {
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 700;
             color: #fff;
             margin-bottom: 8px;
             line-height: 1.2;
+            text-align: center;
         }
+
         .course-subtitle {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 400;
             color: #fff;
             margin-bottom: 8px;
+            text-align: center;
         }
+
         .course-free {
             font-size: 18px;
             font-weight: 400;
             color: #fff;
             margin-bottom: 24px;
+            text-align: center;
         }
+
         .course-list {
             margin-bottom: 32px;
         }
+
         .course-list-item {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 8px;
@@ -87,12 +99,33 @@
             display: flex;
             align-items: center;
             padding: 0;
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             position: relative;
         }
+
+        .course-list-item.first {
+            margin-left: -50px !important;
+        }
+
+        .course-list-item.two {
+            margin-right: 50px !important;
+            margin-left: -50px !important;
+        }
+
+        .course-list-item.three {
+            margin-right: 100px !important;
+            margin-left: -50px !important;
+            white-space: nowrap;
+            /* نذار خط بعدی بره */
+            overflow: hidden;
+            /* مخفی کن بقیه متن */
+            text-overflow: ellipsis;
+        }
+
         .course-list-item:last-child {
             margin-bottom: 0;
         }
+
         .course-list-item .item-icon {
             background: #FFD600;
             border-radius: 0 8px 8px 0;
@@ -106,14 +139,16 @@
             margin-left: 0;
             margin-right: 0;
         }
+
         .course-list-item .item-text {
             color: #fff;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 10px;
+            font-weight: 200;
             padding: 0 16px 0 0;
             flex: 1;
             line-height: 40px;
         }
+
         .course-btn {
             background: #222;
             color: #fff;
@@ -125,13 +160,15 @@
             margin-top: 24px;
             cursor: pointer;
             align-self: flex-start;
-            box-shadow: 0 2px 8px rgba(34,34,34,0.08);
+            box-shadow: 0 2px 8px rgba(34, 34, 34, 0.08);
             transition: background 0.2s;
         }
+
         .course-btn:hover {
             background: #FFD600;
             color: #222;
         }
+
         .social-section {
             background: #222;
             margin-top: 80px;
@@ -139,6 +176,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .social-bg {
             position: absolute;
             left: 0;
@@ -148,12 +186,14 @@
             pointer-events: none;
             z-index: 0;
         }
+
         .social-bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             opacity: 0.12;
         }
+
         .social-content {
             position: relative;
             z-index: 1;
@@ -163,6 +203,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         .social-title {
             font-size: 32px;
             font-weight: 700;
@@ -170,6 +211,7 @@
             margin-bottom: 16px;
             text-align: center;
         }
+
         .social-desc {
             font-size: 18px;
             color: #bdbdbd;
@@ -178,16 +220,18 @@
             text-align: center;
             max-width: 600px;
         }
+
         .social-icons-row {
             display: flex;
             gap: 24px;
             justify-content: center;
             margin-top: 8px;
         }
+
         .social-icon-btn {
             background: #fff;
             border-radius: 32px;
-            box-shadow: 0 2px 8px rgba(34,34,34,0.08);
+            box-shadow: 0 2px 8px rgba(34, 34, 34, 0.08);
             display: flex;
             align-items: center;
             padding: 0 24px 0 16px;
@@ -200,6 +244,7 @@
             transition: background 0.2s;
             position: relative;
         }
+
         .social-icon-btn .icon {
             background: #FFD600;
             border-radius: 50%;
@@ -212,65 +257,87 @@
             color: #222;
             margin-left: 12px;
         }
+
         .social-icon-btn.telegram .icon {
             background: #FFD600;
             color: #222;
         }
+
         .social-icon-btn.instagram .icon {
             background: #FFD600;
             color: #222;
         }
+
         .social-icon-btn.linkedin .icon {
             background: #FFD600;
             color: #222;
         }
+
         .social-icon-btn.youtube .icon {
             background: #FFD600;
             color: #222;
         }
+
         .social-icon-btn.aparat .icon {
             background: #FFD600;
             color: #222;
         }
+
         .social-icon-btn:hover {
             background: #FFD600;
             color: #222;
         }
+
         @media (max-width: 1300px) {
-            .container, .social-content {
+
+            .container,
+            .social-content {
                 width: 1000px;
             }
         }
+
         @media (max-width: 1100px) {
-            .container, .social-content {
+
+            .container,
+            .social-content {
                 width: 90vw;
             }
+
             .courses-row {
                 flex-direction: column;
                 align-items: center;
             }
+
             .course-card {
                 width: 90vw;
                 margin-bottom: 32px;
             }
         }
+
         @media (max-width: 700px) {
-            .container, .social-content {
+
+            .container,
+            .social-content {
                 width: 98vw;
             }
+
             .course-card {
                 width: 98vw;
                 padding: 32px 12px 24px 12px;
             }
+
             .social-section {
                 padding: 32px 0 40px 0;
             }
+
             .social-title {
                 font-size: 24px;
             }
+
             .social-desc {
                 font-size: 15px;
             }
+
             .social-icons-row {
                 flex-direction: column;
                 gap: 16px;

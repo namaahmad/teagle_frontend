@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { ReactElement, ReactNode, Suspense, useEffect } from "react";
 import './layout.css'
+import "flag-icon-css/css/flag-icons.min.css";
 import { getCurrentLocale, getI18n } from "@/dictionaries/server";
 import { ApiServices } from "./api/ApiServices";
 import { BaseResponse, SiteSettingDto } from "@/dto";
@@ -36,13 +37,13 @@ export default async function RootLayout(props: AppPropsWithLayout) {
   const locale = await getCurrentLocale();
   const translate = await getI18n()
   const loadSiteData = async () => {
-    const res = await ApiServices.site.getSetting()
-    if (res.status == 200) {
-      const repo: BaseResponse<SiteSettingDto> = await res.json()
-      return repo.result
-      //console.log(repo)
-    }
-
+    // const res = await ApiServices.site.getSetting()
+    // if (res.status == 200) {
+    //   const repo: BaseResponse<SiteSettingDto> = await res.json()
+    //   return repo.result
+    //   //console.log(repo)
+    // }
+    return undefined
   }
   var siteData = await loadSiteData()
 
@@ -61,7 +62,7 @@ export default async function RootLayout(props: AppPropsWithLayout) {
           crossOrigin="anonymous"
         />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
       </head>
       <body suppressHydrationWarning={true} >

@@ -1,226 +1,246 @@
-        .container10 {
-            width: 1200px;
-            margin: 0 auto;
-            padding-top: 40px;
-        }
-        .header10 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-bottom: 32px;
-            direction: ltr;
-        }
-        .header10-top {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .header10-top i {
-            color: #FFD600;
-            font-size: 18px;
-            margin-left: 4px;
-        }
-        .header10-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #222;
-            margin-left: 8px;
-        }
-        .header10-desc {
-            font-size: 16px;
-            color: #bdbdbd;
-            margin-top: 8px;
-        }
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 220px 220px;
-            gap: 32px 24px;
-            margin-bottom: 24px;
-        }
-        .card {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-            background: #fff;
-            display: flex;
-            align-items: flex-end;
-            min-height: 220px;
-        }
-        .card-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        .card-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, rgba(255,214,0,0.85) 0%, rgba(255,214,0,0.7) 100%);
-            z-index: 2;
-        }
-        .card-overlay-dark {
-            background: linear-gradient(180deg, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0.7) 100%);
-        }
-        .card-content {
-            position: relative;
-            z-index: 3;
-            padding: 0 0 32px 0;
-            width: 100%;
-            text-align: right;
-        }
-        .card-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 16px;
-            margin-right: 24px;
-        }
-        .card-btn {
-            display: inline-flex;
-            align-items: center;
-            background: #222;
-            color: #fff;
-            font-size: 15px;
-            border-radius: 24px;
-            padding: 8px 24px 8px 16px;
-            margin-right: 24px;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            font-family: inherit;
-            font-weight: 400;
-            transition: background 0.2s;
-        }
-        .card-btn i {
-            margin-left: 8px;
-            font-size: 14px;
-        }
-        .card-btn:hover {
-            background: #FFD600;
-            color: #222;
-        }
-        .center-logo {
-            grid-column: 2 / 3;
-            grid-row: 1 / 3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: none;
-            box-shadow: none;
-            min-height: 0;
-        }
-        .logo-content {
-            text-align: center;
-            width: 100%;
+      .card-custom {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+        background: #fff;
+        display: flex;
+        align-items: flex-end;
+        min-height: 400px;
+        height: 400px;
+        transition: box-shadow 0.2s;
+      }
+      .card-custom img {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      .card-custom .overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(180deg, rgba(255, 211, 51, 0.7) 70%, rgba(255, 211, 51, 0.95) 100%);
+        z-index: 2;
+        pointer-events: none;
+      }
+      .card-content-custom {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+      .card-content-custom.right {
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 40px;
+        padding-left: 0;
+      }
+      .card-content-custom.left {
+        align-items: flex-start;
+        text-align: right;
+        padding-right: 40px;
+        padding-left: 0;
+      }
+      .card-content-custom.center {
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 40px;
+        padding-left: 0;
+      }
+      .card-title-custom {
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.2;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      }
+      .card-btn-custom {
+        background: #181818;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 32px 12px 24px;
+        font-size: 1.1rem;
+        font-family: inherit;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        transition: background 0.2s;
+        outline: none;
+      }
+      .card-btn-custom i {
+        font-size: 1.1rem;
+        margin-left: 8px;
+      }
+      .logo-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 0 0;
+      }
+      .logo-teagle {
+        font-size: 6.5rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        color: #FFD333;
+        position: relative;
+        line-height: 1;
+        font-family: 'Vazirmatn', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -18px;
+        margin-top: 10px;
+      }
+      .logo-eye {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -30%);
+        width: 180px;
+        height: 110px;
+        z-index: 2;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo-eye-svg {
+        width: 180px;
+        height: 110px;
+        display: block;
+      }
+      .logo-magazine {
+        font-size: 3.2rem;
+        font-weight: 900;
+        color: #181818;
+        letter-spacing: 0.01em;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 0 2px 8px rgba(255,211,51,0.25);
+        font-family: 'Vazirmatn', Arial, sans-serif;
+      }
+      .motion-class {
+        width: 100%;
+        max-width: 1800px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 0;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .motion-class img {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      .motion-class .motion-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(90deg, rgba(255,211,51,0.7) 60%, rgba(255,211,51,0.95) 100%);
+        z-index: 2;
+        pointer-events: none;
+      }
+      .motion-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .motion-title {
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      }
+      .motion-play {
+        width: 60px;
+        height: 60px;
+        background: #181818;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFD333;
+        font-size: 2.2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        margin-top: 0;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      @media (max-width: 1400px) {
+        .card-custom {
+          min-height: 320px;
+          height: 320px;
         }
         .logo-teagle {
-            font-size: 72px;
-            font-weight: 700;
-            color: #FFD600;
-            letter-spacing: 2px;
-            line-height: 1;
-            position: relative;
-            font-family: 'Vazirmatn', Arial, sans-serif;
+          font-size: 4.5rem;
+        }
+        .logo-eye {
+          width: 120px;
+          height: 70px;
+        }
+        .logo-eye-svg {
+          width: 120px;
+          height: 70px;
         }
         .logo-magazine {
-            font-size: 38px;
-            font-weight: 700;
-            color: #222;
-            letter-spacing: 1px;
-            margin-top: -12px;
-            font-family: 'Vazirmatn', Arial, sans-serif;
+          font-size: 2.2rem;
         }
         .motion-class {
-            width: 100%;
-            margin-top: 24px;
-            margin-bottom: 48px;
-        }
-        .motion-card {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-            background: #fff;
-            min-height: 160px;
-            display: flex;
-            align-items: flex-end;
-        }
-        .motion-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        .motion-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(90deg, rgba(255,214,0,0.85) 0%, rgba(255,214,0,0.7) 100%);
-            z-index: 2;
-        }
-        .motion-content {
-            position: relative;
-            z-index: 3;
-            padding: 0 0 32px 0;
-            width: 100%;
-            text-align: right;
+          height: 220px;
         }
         .motion-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-            margin-right: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+          font-size: 1.5rem;
         }
-        .motion-play {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: none;
-            border: 2px solid #FFD600;
-            color: #FFD600;
-            font-size: 18px;
-            margin-right: 8px;
+      }
+      @media (max-width: 1100px) {
+        .card-custom {
+          min-height: 260px;
+          height: 260px;
         }
-        .ads-bar {
-            width: 100vw;
-            background: #e5e5e5;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #bdbdbd;
-            font-weight: 700;
-            margin-top: 48px;
-            letter-spacing: 2px;
+        .motion-class {
+          height: 160px;
         }
-        /* Responsive */
-        @media (max-width: 1300px) {
-            .container {
-                width: 98vw;
-            }
+      }
+      @media (max-width: 700px) {
+        .card-custom {
+          min-height: 180px;
+          height: 180px;
         }
-        @media (max-width: 900px) {
-            .container {
-                width: 100vw;
-                padding: 0 8px;
-            }
-            .main-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(4, 220px);
-            }
-            .center-logo {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-            }
+        .motion-class {
+          height: 100px;
         }
+        .logo-teagle {
+          font-size: 2.2rem;
+        }
+        .logo-eye {
+          width: 60px;
+          height: 35px;
+        }
+        .logo-eye-svg {
+          width: 60px;
+          height: 35px;
+        }
+        .logo-magazine {
+          font-size: 1.1rem;
+        }
+      }

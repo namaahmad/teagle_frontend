@@ -1,6 +1,5 @@
 "use client"
 import React, { useRef } from 'react'
-import TopNav from '../TopNav'
 import useVerticalScrollEvent from '@/hooks/useVerticalScrollEvent'
 import { SitesettingDataDto, SiteSettingDto } from '@/dto'
 import { useI18n } from '@/dictionaries/client'
@@ -8,6 +7,7 @@ import { useCurrentLocale } from '@/dictionaries/client'
 import logo from "@/components/img/logo.png"
 import Image from 'next/image';
 import moment from "moment-jalaali"
+import LanguageSelector from '../LanguageSelector'
 moment.loadPersian({ usePersianDigits: true,dialect: 'persian-modern' });
 interface IProps {
   data?: SiteSettingDto
@@ -33,11 +33,7 @@ const Header = (props: IProps) => {
     <header className="header_area" ref={stickyRef}>
       <div className="top-bar">
         <div className="top-bar-right">
-          <button className="language-btn">
-            <div className="flag-icon"></div>
-            <span>{locale == "fa" ? translate("persian") : translate("english")}</span>
-            <i className="fas fa-chevron-down"></i>
-          </button>
+          <LanguageSelector/>
           <button className="search-btn">
             <i className="fas fa-search"></i>
             <span>{translate("search")}</span>

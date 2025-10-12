@@ -1,113 +1,126 @@
 "use client"
 import React, { useState } from 'react'
 import Link, { LinkProps } from 'next/link';
-
+import { BrokenImage as BrokenImageIcon } from "@mui/icons-material"
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
 import "./style.css"
 
 interface IProps {
 }
 const Section10Component = (props: IProps) => {
-
-    const local = useCurrentLocale()
+    const translate = useI18n();
     return (
-        <section className="section10">
-            <div className="container10">
-                <div className="header10">
-                    <div className="header10-top">
-                        <i className="fas fa-chevron-left">
-                        </i>
-                        <span className="header10-title">
-                            تیگل مگ
-                            <i className="far fa-newspaper">
-                            </i>
-                        </span>
-                    </div>
-                    <div className="header10-desc">
-                        آخرین مقالات تیگل
-                    </div>
-                </div>
-                <div className="main-grid">
-                    <div className="card">
-                        <img alt="Closeup of gold bars with a blurred background, warm yellow lighting" className="card-bg" src="https://placehold.co/400x220?text=Gold+bars+closeup&amp;font=roboto" />
-                        <div className="card-overlay">
+        <section className="container-fluid" >
+
+            <div className="row justify-content-center">
+                <div className="col-12 col-lg-10">
+                    <div className="section-title" style={{ marginBottom: "0.2rem" }}>
+                        <div style={{ marginLeft: "20px" }}>
+                            <BrokenImageIcon />
                         </div>
-                        <div className="card-content">
-                            <div className="card-title">
-                                به روایت تیگل
+
+                        {translate("teagleMag")}
+                        <div className="logo-badge"><i className='fas fa-chevron-left'> </i></div>
+                    </div>
+                    <div className="section-subtitle" >
+                        {translate("teagleMagDesc")}
+                    </div>
+                    <div className="main-content-wrapper">
+                        <div className="container-fluid px-4 px-md-5 py-4" >
+                            <div className="row g-4 justify-content-center">
+
+                                <div className="col-12 col-md-4 d-flex">
+                                    <div className="card-custom w-100">
+                                        <img alt="تصویر شمش طلا و سکه‌های طلا روی هم چیده شده در پس‌زمینه تار و طلایی" src="https://placehold.co/600x600/gold/fff?text=&amp;font=roboto" />
+                                        <div className="overlay">
+                                        </div>
+                                        <div className="card-content-custom left">
+                                            <div className="card-title-custom">
+                                                به روایت تیگل
+                                            </div>
+                                            <button className="card-btn-custom">
+                                                <i className="fas fa-chevron-left">
+                                                </i>
+                                                مشاهده بیشتر
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-md-4 d-flex">
+                                    <div className="card-custom w-100">
+                                        <img alt="تصویر سکه‌های طلا که در هوا پخش شده‌اند و یک کیف پول طلایی" src="https://placehold.co/600x600/FFD333/181818?text=&amp;font=roboto" />
+                                        <div className="overlay">
+                                        </div>
+                                        <div className="card-content-custom center">
+                                            <div className="card-title-custom">
+                                                تیگل آی
+                                            </div>
+                                            <button className="card-btn-custom">
+                                                <i className="fas fa-chevron-left">
+                                                </i>
+                                                مشاهده بیشتر
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-md-4 d-flex">
+                                    <div className="card-custom w-100">
+                                        <img alt="تصویر یک زن نشسته پشت میز کار با گیاه و تابلو در پس‌زمینه" src="https://placehold.co/600x600/222/fff?text=&amp;font=roboto" />
+                                        <div className="overlay">
+                                        </div>
+                                        <div className="card-content-custom right">
+                                            <div className="card-title-custom">
+                                                تحلیل هفتگی
+                                            </div>
+                                            <button className="card-btn-custom">
+                                                <i className="fas fa-chevron-left">
+                                                </i>
+                                                مشاهده بیشتر
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button className="card-btn">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                                مشاهده بیشتر
-                            </button>
-                        </div>
-                    </div>
-                    <div className="center-logo">
-                        <div className="logo-content">
-                            <div style={{ position: "relative", display: "inline-block;" }}>
-                                <span className="logo-teagle" style={{ position: "relative" }}>
-                                    TEAGLE
-                                    <span className="logo-eye" style={{ position: "absolute", left: "50%", top: "54%", transform: "translate(-50%,-50%);" }}>
-                                        <svg fill="none" height="32" style={{ verticalAlign: "middle" }}  viewBox="0 0 60 32" width="60" xmlns="http://www.w3.org/2000/svg">
-                                            <ellipse cx="30" cy="16" fill="#222" rx="28" ry="12">
+
+                            <div className="logo-section my-5">
+                                <div className="logo-teagle" style={{ position: "relative" }}>
+                                    TEA
+                                    <span className="logo-eye">
+                                        <svg className="logo-eye-svg" fill="none" viewBox="0 0 180 110" xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="90" cy="55" fill="#181818" rx="80" ry="35">
                                             </ellipse>
-                                            <ellipse cx="30" cy="16" fill="#FFD600" rx="8" ry="8">
+                                            <ellipse cx="90" cy="55" fill="#FFD333" rx="60" ry="25">
                                             </ellipse>
-                                            <ellipse cx="30" cy="16" fill="#222" rx="4" ry="4">
+                                            <ellipse cx="90" cy="55" fill="#181818" rx="18" ry="18">
                                             </ellipse>
+                                            <ellipse cx="90" cy="55" fill="#FFD333" rx="8" ry="8">
+                                            </ellipse>
+                                            <rect fill="#181818" height="25" rx="12" transform="rotate(-15 30 30)" width="120" x="30" y="30">
+                                            </rect>
                                         </svg>
                                     </span>
-                                </span>
+                                    GLE
+                                </div>
+                                <div className="logo-magazine">
+                                    MAGAZINE
+                                </div>
                             </div>
-                            <div className="logo-magazine">
-                                MAGAZINE
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img alt="Macro shot of gold coins with a yellow color overlay, abstract background" className="card-bg" src="https://placehold.co/400x220?text=Gold+coins+macro+shot&amp;font=roboto" />
-                        <div className="card-overlay">
-                        </div>
-                        <div className="card-content">
-                            <div className="card-title">
-                                تیگل آی
-                            </div>
-                            <button className="card-btn">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                                مشاهده بیشتر
-                            </button>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img alt="Woman sitting in an office with plants and a motivational poster in the background, grayscale" className="card-bg" src="https://placehold.co/400x220?text=Woman+in+office+with+plants&amp;font=roboto" />
-                        <div className="card-overlay card-overlay-dark">
-                        </div>
-                        <div className="card-content">
-                            <div className="card-title">
-                                تحلیل هفتگی
-                            </div>
-                            <button className="card-btn">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                                مشاهده بیشتر
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div className="motion-class">
-                    <div className="motion-card">
-                        <img alt="Person in yellow shirt writing with a pen on a financial chart, yellow overlay" className="motion-bg" src="https://placehold.co/1200x160?text=Person+writing+with+pen+on+chart&amp;font=roboto" />
-                        <div className="motion-overlay">
-                        </div>
-                        <div className="motion-content">
-                            <div className="motion-title">
-                                کلاس موشن
-                                <span className="motion-play">
-                                    <i className="fas fa-play">
-                                    </i>
-                                </span>
+
+                            <div className="motion-class mb-4">
+                                <img alt="تصویر دست فردی که با خودکار روی نمودارهای مالی و داده‌های آماری کار می‌کند، نمودارهای زرد رنگ در پیش‌زمینه" src="https://placehold.co/1800x300/FFD333/181818?text=&amp;font=roboto" />
+                                <div className="motion-overlay">
+                                </div>
+                                <div className="motion-content">
+                                    <div className="motion-title">
+                                        کلاس موشن
+                                    </div>
+                                    <div className="motion-play">
+                                        <i className="fas fa-play">
+                                        </i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

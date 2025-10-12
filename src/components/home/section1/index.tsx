@@ -54,8 +54,8 @@ const Section1Component = (props: IProps) => {
                     <div className="broker-item">
                         <div className="broker-logo">
                             <svg width="150" height="50" viewBox="0 0 150 50">
-                                <text x="75" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#000">Alpari</text>
-                                <path d="M30,10 L40,30 L50,10 M35,20 L45,20" stroke="#000" stroke-width="3" fill="none" />
+                                <text x="75" y="35" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#000">Alpari</text>
+                                <path d="M30,10 L40,30 L50,10 M35,20 L45,20" stroke="#000" strokeWidth="3" fill="none" />
                             </svg>
                         </div>
                         <span className="broker-badge">ADS آ</span>
@@ -63,7 +63,7 @@ const Section1Component = (props: IProps) => {
                     <div className="broker-item">
                         <div className="broker-logo">
                             <svg width="150" height="50" viewBox="0 0 150 50">
-                                <text x="75" y="35" text-anchor="middle" font-size="20" font-style="italic" font-weight="bold" fill="#000">xChief</text>
+                                <text x="75" y="35" textAnchor="middle" fontSize="20" fontStyle="italic" fontWeight="bold" fill="#000">xChief</text>
                             </svg>
                         </div>
                         <span className="broker-badge">ADS بررسی پذیره»</span>
@@ -71,8 +71,8 @@ const Section1Component = (props: IProps) => {
                     <div className="broker-item">
                         <div className="broker-logo">
                             <svg width="150" height="50" viewBox="0 0 150 50">
-                                <text x="75" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#000">CIFC</text>
-                                <text x="75" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#000">MARKETS</text>
+                                <text x="75" y="30" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#000">CIFC</text>
+                                <text x="75" y="45" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#000">MARKETS</text>
                             </svg>
                         </div>
                         <span className="broker-badge">ADS آ</span>
@@ -80,7 +80,7 @@ const Section1Component = (props: IProps) => {
                     <div className="broker-item">
                         <div className="broker-logo">
                             <svg width="150" height="50" viewBox="0 0 150 50">
-                                <text x="75" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#000">ERRANTE</text>
+                                <text x="75" y="35" textAnchor="middle" fontSize="22" fontWeight="bold" fill="#000">ERRANTE</text>
                             </svg>
                         </div>
                         <span className="broker-badge">ADS آ</span>
@@ -90,8 +90,8 @@ const Section1Component = (props: IProps) => {
                             <svg width="150" height="50" viewBox="0 0 150 50">
                                 <circle cx="30" cy="25" r="15" fill="#000" />
                                 <path d="M35,25 L45,15 L45,35 Z" fill="#000" />
-                                <text x="95" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#000">DELTAFX</text>
-                                <text x="95" y="43" text-anchor="middle" font-size="8" fill="#000">This is Forex</text>
+                                <text x="95" y="30" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#000">DELTAFX</text>
+                                <text x="95" y="43" textAnchor="middle" fontSize="8" fill="#000">This is Forex</text>
                             </svg>
                         </div>
                         <span className="broker-badge">ADS آ</span>

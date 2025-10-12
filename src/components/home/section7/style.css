@@ -22,20 +22,6 @@
             font-weight: 700;
             color: #1a1a1a;
         }
-
-        .logo-badge {
-            background: #FFD700;
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            color: #000;
-        }
-
         .price-icon {
             width: 36px;
             height: 36px;
@@ -46,11 +32,6 @@
             height: 100%;
             stroke: #1a1a1a;
             stroke-width: 2;
-        }
-
-        .section-subtitle {
-            color: #9ca3af;
-            font-size: 15px;
         }
 
         /* Table Container */

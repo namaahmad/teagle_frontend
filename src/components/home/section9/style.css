@@ -8,8 +8,7 @@
 
 
    .container9 {
-       width: 100vw;
-       min-height: 100vh;
+       background: linear-gradient(180deg, #fff 0%, #bdbdbd 60%, #fff 100%);
        margin: 0;
        padding: 0;
    }
@@ -18,7 +17,7 @@
        width: 100%;
        padding-top: 60px;
        padding-bottom: 0;
-       background: linear-gradient(180deg, #fff 0%, #bdbdbd 60%, #fff 100%);
+
        position: relative;
        min-height: 600px;
        box-sizing: border-box;
@@ -76,7 +75,9 @@
    .header9-tabs button.selected {
        background: #222;
        color: #fff;
-       font-weight: 700;
+       font-weight: 200;
+       display: flex;
+       align-items: center;
    }
 
    .header9-tabs button.yellow {
@@ -206,6 +207,7 @@
        display: flex;
        align-items: center;
        margin-bottom: 10px;
+       justify-content: space-between;
    }
 
    .testimonial-role {
@@ -222,6 +224,7 @@
        font-size: 15px;
        font-weight: 700;
        margin-left: 8px;
+       margin-right: 8px;
    }
 
    .testimonial-avatar {
@@ -284,4 +287,35 @@
        .header9-title span {
            font-size: 18px;
        }
+   }
+
+   .commentRegister {
+       background-color: black;
+       color: white;
+   }
+
+   .chevron-left {
+       width: 10px;
+       height: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       margin-right: 5px;
+       margin-left: 5px;
+   }
+
+   .btnall {
+    display: flex;
+    align-items: center;
+   }
+   .chevron-left-all{
+     width: 10px;
+       height: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: black;
+       margin-right: 5px;
+       margin-left: 5px;
    }

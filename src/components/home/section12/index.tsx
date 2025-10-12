@@ -73,19 +73,19 @@ const Section12Component = (props: IProps) => {
                     <svg fill="none" height="100%" style={{ display: "block" }} viewBox="0 0 480 320" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <path d="M480 0C480 176 480 320 480 320H0V0H480Z" fill="#FFD23B">
                         </path>
-                        <path d="M420 60C420 60 410 30 350 30C290 30 270 60 270 60" stroke="#222" stroke-linecap="round" stroke-width="8">
+                        <path d="M420 60C420 60 410 30 350 30C290 30 270 60 270 60" stroke="#222" strokeLinecap="round" strokeWidth="8">
                         </path>
-                        <path d="M420 60C420 60 430 120 350 120C270 120 270 60 270 60" stroke="#222" stroke-linecap="round" stroke-width="8">
+                        <path d="M420 60C420 60 430 120 350 120C270 120 270 60 270 60" stroke="#222" strokeLinecap="round" strokeWidth="8">
                         </path>
-                        <path d="M350 120C350 120 340 200 420 200" stroke="#222" stroke-linecap="round" stroke-width="8">
+                        <path d="M350 120C350 120 340 200 420 200" stroke="#222" strokeLinecap="round" strokeWidth="8">
                         </path>
-                        <path d="M420 200C420 200 440 220 420 260C400 300 350 300 350 300" stroke="#222" stroke-linecap="round" stroke-width="8">
+                        <path d="M420 200C420 200 440 220 420 260C400 300 350 300 350 300" stroke="#222" strokeLinecap="round" strokeWidth="8">
                         </path>
-                        <ellipse cx="390" cy="90" fill="#fff" rx="30" ry="22" stroke="#222" stroke-width="8">
+                        <ellipse cx="390" cy="90" fill="#fff" rx="30" ry="22" stroke="#222" strokeWidth="8">
                         </ellipse>
                         <ellipse cx="390" cy="90" fill="#222" rx="12" ry="10">
                         </ellipse>
-                        <path d="M370 80C370 80 375 70 390 70C405 70 410 80 410 80" stroke="#222" stroke-linecap="round" stroke-width="4">
+                        <path d="M370 80C370 80 375 70 390 70C405 70 410 80 410 80" stroke="#222" strokeLinecap="round" strokeWidth="4">
                         </path>
                     </svg>
                 </div>

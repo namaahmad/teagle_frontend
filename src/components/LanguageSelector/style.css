@@ -1,0 +1,28 @@
+.language-btn {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 12px;
+    background-color: #fff;
+}
+
+.language-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu {
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flag-icon {
+    width: 30px;
+    height: 16px;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.dropdown-item{
+    text-align: center !important;
+    cursor: pointer;
+}
