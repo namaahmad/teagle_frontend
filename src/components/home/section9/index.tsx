@@ -16,7 +16,7 @@ const Section9Component = (props: IProps) => {
         <section className="container-fluid" >
 
             <div className="row justify-content-center">
-                <div className="col-12 col-lg-10">
+                <div className="col-12 col-lg-12">
                     <div className="header9-section">
                         <div className="header9-content9">
                             <div className="header9-title">

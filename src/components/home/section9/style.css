@@ -179,8 +179,7 @@
    }
 
    .testimonials-wrapper {
-       width: 1200px;
-       max-width: 95vw;
+       max-width: 90vw;
        margin: 0 auto;
        display: grid;
        grid-template-columns: repeat(3, 1fr);
@@ -252,7 +251,7 @@
 
        .header9-content,
        .testimonials-wrapper {
-           width: 98vw;
+           width: 90vw;
        }
 
        .map-wrapper {
@@ -266,7 +265,7 @@
        }
 
        .map-wrapper {
-           width: 98vw;
+           width: 90vw;
        }
    }
 
@@ -277,11 +276,11 @@
        }
 
        .header9-content {
-           width: 98vw;
+           width: 90vw;
        }
 
        .map-wrapper {
-           width: 98vw;
+           width: 90vw;
        }
 
        .header9-title span {

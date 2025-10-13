@@ -282,6 +282,9 @@
     .episode-name {
         font-size: 36px;
     }
+     .crypto-card {
+        padding: 0px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -335,7 +338,7 @@
 
     .crypto-card {
         min-width: 200px;
-        padding: 20px;
+        padding: 0px;
     }
 
     .episode-badge {
