@@ -6,17 +6,17 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t ds_ai_plateform_site:0.0.1  .'
+        sh 'docker build -t teagle_frontend:0.0.1  .'
       }
     }
-    stage('Deploying ds_ai_plateform_site container to Kubernetes') {
+    stage('Deploying teagle_frontend container to Kubernetes') {
       agent any
       steps {   
           catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh 'kubectl delete -f ./ds_ai_plateform_site.yaml'
+                    sh 'kubectl delete -f ./teagle_frontend.yaml'
                 } 
      
-      sh 'kubectl create -f ./ds_ai_plateform_site.yaml'
+      sh 'kubectl create -f ./teagle_frontend.yaml'
     }
       
       
