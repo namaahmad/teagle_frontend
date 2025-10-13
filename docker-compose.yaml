@@ -1,14 +1,8 @@
-networks:
-  default :
-    driver: bridge
-    external: true
-    name: ds_ai_plateform_network
-
 services:
-  ds_ai_plateform_site:
-    image: ds_ai_plateform_site:0.0.1
-    container_name: ds_ai_plateform_site
-    hostname: ds_ai_plateform_site
+  teagle_frontend:
+    image: teagle_frontend:0.0.1
+    container_name: teagle_frontend
+    hostname: teagle_frontend
     restart: always
     ports:
-      - 8080:80
+      - 8080:3000

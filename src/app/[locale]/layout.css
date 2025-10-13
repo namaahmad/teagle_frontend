@@ -486,19 +486,12 @@
             padding: 60px 40px;
         }
 
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 200px 1fr 200px;
-            gap: 60px;
-            align-items: start;
-        }
 
         .social-icons {
             display: flex;
             flex-direction: column;
             gap: 15px;
+
         }
 
         .social-icon {
@@ -513,6 +506,7 @@
             font-size: 24px;
             cursor: pointer;
             transition: transform 0.3s, background 0.3s;
+            margin-right: 50px;
         }
 
         .social-icon:hover {
@@ -525,17 +519,26 @@
             justify-content: space-between;
             align-items: center;
             gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: flex-start;
         }
 
         .footer-links {
             display: flex;
-            gap: 80px;
+            gap: 60px;
         }
 
         .link-column {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
+        }
+
+        .link-column1 {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
         }
 
         .link-item {
@@ -568,7 +571,7 @@
             height: 80px;
             position: relative;
             margin: 0 auto 20px;
-        } 
+        }
 
         .logo-text {
             font-size: 48px;
@@ -691,11 +694,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
             .social-icons {
                 flex-direction: row;
                 justify-content: center;
@@ -770,11 +768,13 @@
             color: #000;
             margin-right: 20px;
         }
-        .container-fluid{
+
+        .container-fluid {
             padding-top: 5rem;
             padding-bottom: 0;
         }
-          .section-subtitle {
+
+        .section-subtitle {
             color: #bdbdbd;
             font-size: 1rem;
             font-weight: 400;

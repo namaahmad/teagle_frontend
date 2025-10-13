@@ -1,6 +1,5 @@
 "use client"
 import { useI18n } from '@/dictionaries/client';
-import Link from '@/components/LinkComponent';
 import React from 'react'
 import logoFooter from "@/components/img/logoFooter.png"
 import Image from 'next/image';
@@ -20,7 +19,7 @@ const Footer = (props: Props) => {
                         </div>
                         <div className="col-md-6  p-3 rounded">
                             <form className="email-form">
-                                <button type="submit" style={{height:"60px"}} className="submit-btn">{translate("confirm")}</button>
+                                <button type="submit" style={{ height: "60px" }} className="submit-btn">{translate("confirm")}</button>
                                 <input type="email" className="email-input" placeholder={translate("mail")} required />
                             </form>
                         </div>
@@ -30,72 +29,81 @@ const Footer = (props: Props) => {
 
             <div className="main-footer">
 
-                <div className="footer-container">
-                    <div className="social-icons">
-                        <div className="social-icon">
-                            <i className="fab fa-telegram"></i>
-                        </div>
-                        <div className="social-icon">
-                            <i className="fab fa-instagram"></i>
-                        </div>
-                        <div className="social-icon">
-                            <i className="fab fa-linkedin"></i>
-                        </div>
-                        <div className="social-icon">
-                            <i className="fab fa-youtube"></i>
-                        </div>
-                        <div className="social-icon">
-                            <i className="fas fa-cog"></i>
-                        </div>
-                    </div>
-
-                    <div className="footer-center">
-                        <div className="footer-links">
-                            <div className="link-column">
-                                <a href="#" className="link-item">{translate("questions")}</a>
-                                <a href="#" className="link-item"></a>
-                                <a href="#" className="link-item">تماس با ما</a>
-                                <a href="#" className="link-item">همکاری با ما</a>
-                                <a href="#" className="link-item">حریم خصوصی</a>
-                            </div>
-                        </div>
-
-                        <div className="logo-container">
-                            <div className="logo-eye">
-                               <Image alt={translate("titleApp")}  width={200} height={120} src={logoFooter}/> 
-                            </div>
-                        </div>
+                
+                <div className="footer-center">
 
                         <div className="footer-links">
-                            <div className="link-column">
+                            <div className="link-column1">
                                 <a href="#" className="link-item">{translate("brokers")}</a>
                                 <a href="#" className="link-item">{translate("exchange")}</a>
                                 <a href="#" className="link-item">{translate("propforms")}</a>
                                 <a href="#" className="link-item">{translate("operators")}</a>
                             </div>
-                            <div className="link-column">
-                                <a href="#" className="link-item">تحلیل و اخبار</a>
-                                <a href="#" className="link-item">آموزش</a>
-                                <a href="#" className="link-item">استاد تیگل</a>
-                                <a href="#" className="link-item">تیگل مک</a>
-                                <a href="#" className="link-item">تیگل کست</a>
+                            <div className="link-column1">
+                                <a href="#" className="link-item">{translate("analysisAndNews")}</a>
+                                <a href="#" className="link-item">{translate("education")}</a>
+                                <a href="#" className="link-item">{translate("teagleMaster")}</a>
+                                <a href="#" className="link-item">{translate("teagleMag")}</a>
+                                <a href="#" className="link-item">{translate("teagleCast")}</a>
                             </div>
                         </div>
+                        <div className="logo-container">
+                            <div className="logo-eye">
+                                <Image alt={translate("titleApp")} width={200} height={120} src={logoFooter} />
+                            </div>
+                        </div>
+                        <div className="footer-links">
+                            <div className="link-column">
+
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <a href="#" className="link-item">{translate("questions")}</a>
+                                    <div className="social-icon">
+                                        <i className="fab fa-telegram"></i>
+                                    </div>
+                                </div>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <a href="#" className="link-item">{translate("aboutUs")}</a>
+                                    <div className="social-icon">
+                                        <i className="fab fa-instagram"></i>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <a href="#" className="link-item">{translate("contactUs")}</a>
+                                    <div className="social-icon">
+                                        <i className="fab fa-linkedin"></i>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <a href="#" className="link-item">{translate("workUs")}</a>
+                                    <div className="social-icon">
+                                        <i className="fab fa-youtube"></i>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <a href="#" className="link-item">{translate("privacy")}</a>
+                                    <div className="social-icon">
+                                        <i className="fas fa-cog"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-
-                    <div></div>
-                </div>
-
+                <hr className="border-white disclaimer-section"  ></hr>
                 <div className="disclaimer-section">
-                    <h2 className="disclaimer-title">سلب مسئولیت</h2>
+                    <h2 className="disclaimer-title"> {translate("disclaimer")}</h2>
                     <p className="disclaimer-text">
-                        معاملات مربوط به بازارهای فارکس، آتی ها، ایشن ها، سهام، ارزهای رمز نگاری شده با هر نائر تجاری دیگر توام با سطح بالایی از خطر و ریسک می باشد که ممکن است برای همه سرمایه گذاران مناسب نباشد. همیشه این احتمال وجود دارد که شما بخشی یا تمام سرمایه گذاری اولیه خود را از دست بدهید، بنابراین شما نباید پولی را سرمایه گذاری کنید که نتوانید از دست دادن آن را تاب بیاورید. وب سایت ما.
+                        {translate("disclaimerDesc")}
                     </p>
                 </div>
 
                 <div className="bottom-footer">
-                    <div className="footer-copyright">کلیه حقوق این سایت متعلق به تیگل می باشد</div>
-                    <div className="footer-copyright">طراحی و توسعه توسط: شرکت تیگل</div>
+                    <div className="footer-copyright">{translate("copyRight")}</div>
+                    <div className="footer-copyright">{translate("designBy")}</div>
                 </div>
             </div>
         </footer>

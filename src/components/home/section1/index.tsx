@@ -8,8 +8,7 @@ import { useI18n, useCurrentLocale } from '@/dictionaries/client';
 interface IProps {
 }
 const Section1Component = (props: IProps) => {
-
-    const local = useCurrentLocale()
+const translate = useI18n();
     return (
         <section>
             <div className="hero-section">
@@ -17,16 +16,16 @@ const Section1Component = (props: IProps) => {
                 <div className="hero-content">
                     <div className="hero-logo">
                         <h1><span className="t-letter">T</span>eagle</h1>
-                        <p className="hero-tagline">TRADER'S SHARP EYE</p>
-                        <p className="hero-tagline-fa">تیگل چشم تیزبین تریدر</p>
+                        <p className="hero-tagline">TRADER S SHARP EYE</p>
+                        <p className="hero-tagline-fa">{translate("teagleEye")}</p>
                     </div>
                     <div className="hero-search">
                         <form className="search-container">
                             <button type="submit" className="search-submit">
                                 <i className="fas fa-search"></i>
-                                <span>جستجو</span>
+                                <span>{translate("search")}</span>
                             </button>
-                            <input type="text" className="search-input" placeholder="... / پرایفرم / بروکر / صرافی" />
+                            <input type="text" className="search-input" placeholder={translate("searchPlaceholder")} />
                         </form>
                     </div>
                 </div>

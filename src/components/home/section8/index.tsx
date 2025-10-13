@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Link, { LinkProps } from 'next/link';
 import { School as SchoolIcon } from "@mui/icons-material"
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
+import Image from 'next/image';
 import "./style.css"
 
 interface IProps {
@@ -123,7 +124,7 @@ const Section8Component = (props: IProps) => {
                 <div className="col-12 col-lg-12">
                     <div className="social-section">
                         <div className="social-bg">
-                            <img alt="تصویر پس‌زمینه با خطوط و نمودارهای مالی و ساختمان‌های شهری به سبک مینیمال و رنگ خاکستری تیره" src="https://placehold.co/1200x300/222/222?text=&amp;font=roboto" />
+                            <img alt="تصویر پس‌زمینه با خطوط و نمودارهای مالی و ساختمان‌های شهری به سبک مینیمال و رنگ خاکستری تیره"  src="https://placehold.co/1200x300/222/222?text=&amp;font=roboto" />
                         </div>
                         <div className="social-content">
                             <div className="social-title">

@@ -39,7 +39,7 @@ const Section12Component = (props: IProps) => {
                             <div key={index} className="warning-item">
                                 <i className="fas fa-exclamation-triangle">
                                 </i>
-                                <span>
+                                <span className='warning-list-text'>
                                     <b>
                                         لورم ایپسوم:
                                     </b>
