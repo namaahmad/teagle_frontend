@@ -56,6 +56,7 @@ export default async function RootLayout(props: AppPropsWithLayout) {
         <meta name="description" content="Free Web tutorials" />
         <meta name="keywords" content="teagle.ir,a.gheblenama" />
         <meta name="author" content="ahmad gheblenama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link
           rel="stylesheet"
           href={locale == "fa" ? "/css/bootstrap_rtl.min.css" : "/css/bootstrap.min.css"}

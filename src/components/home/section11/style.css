@@ -13,8 +13,6 @@
             overflow: hidden;
             border: 1px solid #F2F2F2;
             width: 100%;
-            max-width: 370px;
-            min-height: 260px;
             display: flex;
             flex-direction: column;
             position: relative;
