@@ -4,109 +4,94 @@ import Link, { LinkProps } from 'next/link';
 
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
 import "./style.css"
-
+import section12_1Img from "@/components/img/section12_1.svg"
+import Image from 'next/image';
 interface IProps {
 }
 const Section12Component = (props: IProps) => {
 
-    const local = useCurrentLocale()
+    const translate = useI18n();
     return (
         <section className="section12">
             <div className="warning-section">
                 <div className="warning-content">
-                    <div className="warning-title">
-                        هشدار کلاه برداری
+                    <div className='row'>
+                        <div className='col-6'>
+                            <span className="warning-icon">
+                                <i className="fas fa-exclamation-triangle" style={{ fontSize: "5.2rem", color: "#FFD23B", border: "2px solid #fff", borderRadius: "10px", background: "#fff", padding: "3px 6px 3px 6px" }}>
+                                </i>
+                            </span>
+                        </div>
+                        <div className='col-6'>
+                            <div className="warning-title">
+                                {translate("scamAlert")}
+                            </div>
+                            <div className="warning-subtitle">
+                                {translate("fRUADCUTION")}
+
+                            </div>
+                        </div>
+
                     </div>
-                    <div className="warning-subtitle">
-                        FRUAD CUTION
-                        <span className="warning-icon">
-                            <i className="fas fa-exclamation-triangle" style={{ fontSize: "2.2rem", color: "#FFD23B", border: "3px solid #fff", borderRadius: "10px", background: "#fff", padding: "6px 12px 6px 12px" }}>
-                            </i>
-                        </span>
-                    </div>
+
                     <div className="warning-list">
-                        <div className="warning-item">
-                            <button className="more-btn">
-                                بیشتر
-                            </button>
-                            <span>
-                                <b>
-                                    لورم ایپسوم:
-                                </b>
-                                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-                            </span>
-                            <i className="fas fa-exclamation-triangle">
-                            </i>
-                        </div>
-                        <div className="warning-item">
-                            <button className="more-btn">
-                                بیشتر
-                            </button>
-                            <span>
-                                <b>
-                                    لورم ایپسوم:
-                                </b>
-                                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-                            </span>
-                            <i className="fas fa-exclamation-triangle">
-                            </i>
-                        </div>
-                        <div className="warning-item">
-                            <button className="more-btn">
-                                بیشتر
-                            </button>
-                            <span>
-                                <b>
-                                    لورم ایپسوم:
-                                </b>
-                                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-                            </span>
-                            <i className="fas fa-exclamation-triangle">
-                            </i>
-                        </div>
+                        {[1, 1, 1].map((item, index) => (
+                            <div key={index} className="warning-item">
+                                <i className="fas fa-exclamation-triangle">
+                                </i>
+                                <span>
+                                    <b>
+                                        لورم ایپسوم:
+                                    </b>
+                                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+                                </span>
+
+                                <button className="more-btn">
+                                    {translate("more")} <i className='fas fa-chevron-left' />
+                                </button>
+                            </div>
+                        ))}
+
+
                     </div>
                     <button className="view-more-btn">
-                        مشاهده بیشتر
+                        {translate("moreView")} <i className='fas fa-chevron-left' />
                     </button>
+                    <br />
                 </div>
                 <div className="warning-illustration">
-                    <svg fill="none" height="100%" style={{ display: "block" }} viewBox="0 0 480 320" width="100%" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M480 0C480 176 480 320 480 320H0V0H480Z" fill="#FFD23B">
-                        </path>
-                        <path d="M420 60C420 60 410 30 350 30C290 30 270 60 270 60" stroke="#222" strokeLinecap="round" strokeWidth="8">
-                        </path>
-                        <path d="M420 60C420 60 430 120 350 120C270 120 270 60 270 60" stroke="#222" strokeLinecap="round" strokeWidth="8">
-                        </path>
-                        <path d="M350 120C350 120 340 200 420 200" stroke="#222" strokeLinecap="round" strokeWidth="8">
-                        </path>
-                        <path d="M420 200C420 200 440 220 420 260C400 300 350 300 350 300" stroke="#222" strokeLinecap="round" strokeWidth="8">
-                        </path>
-                        <ellipse cx="390" cy="90" fill="#fff" rx="30" ry="22" stroke="#222" strokeWidth="8">
-                        </ellipse>
-                        <ellipse cx="390" cy="90" fill="#222" rx="12" ry="10">
-                        </ellipse>
-                        <path d="M370 80C370 80 375 70 390 70C405 70 410 80 410 80" stroke="#222" strokeLinecap="round" strokeWidth="4">
-                        </path>
-                    </svg>
+                    <Image src={section12_1Img} alt={translate("scamAlert")} />
                 </div>
             </div>
             <div className="testimonial-section">
                 <div className="testimonial-box">
-                    <span className="testimonial-quote">
-                        ”
-                    </span>
+
                     <div className="testimonial-header">
-                        <span className="testimonial-name">
-                            رضا بیاتی
-                        </span>
-                        <span className="testimonial-avatar">
-                            <img alt="عکس پروفایل مرد ایرانی با پس‌زمینه ساده، چهره جدی، نور طبیعی" src="https://placehold.co/44x44" style={{ width: "44px", height: "44px", borderRadius: "50%", objectFit: "cover" }} />
-                        </span>
-                        <span className="testimonial-role">
-                            مدیر شرکت تحلیل بازار
-                        </span>
+                        <div className='row col-12'>
+                            <div className='col-4 testimonial-avatar-col'>
+                                <span className="testimonial-quote">
+                                    ”
+                                </span>
+                                <span className="testimonial-avatar">
+                                    <img alt="عکس پروفایل مرد ایرانی با پس‌زمینه ساده، چهره جدی، نور طبیعی" src="https://placehold.co/44x44" style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover" }} />
+
+                                </span>
+
+                            </div>
+                            <div className='col-8'>
+                                <span className="testimonial-name">
+                                    رضا بیاتی
+                                </span>
+                                <br />
+                                <span className="testimonial-role">
+                                    مدیر شرکت تحلیل بازار
+                                </span>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div className="testimonial-text">
+                    <div className="testimonial-text10">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
                     </div>
                     <ul className="testimonial-list">

@@ -15,13 +15,13 @@ const Footer = (props: Props) => {
                 <div className="container mt-4">
                     <div className="row header-content">
                         <div className="col-md-6  p-3 rounded">
-                            <h1 className="registration-title">!ثبت نام کن</h1>
-                            <p className="subtitle">با ثبت نام در تیگل معنوی توکل بازارهای جهانی فعالیت کنی</p>
+                            <h1 className="registration-title">{translate("registerDone")}</h1>
+                            <p className="subtitle">{translate("registerDoneDesc")}</p>
                         </div>
                         <div className="col-md-6  p-3 rounded">
                             <form className="email-form">
-                                <button type="submit" style={{height:"60px"}} className="submit-btn">تایید</button>
-                                <input type="email" className="email-input" placeholder="ایمیل" required />
+                                <button type="submit" style={{height:"60px"}} className="submit-btn">{translate("confirm")}</button>
+                                <input type="email" className="email-input" placeholder={translate("mail")} required />
                             </form>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ const Footer = (props: Props) => {
                     <div className="footer-center">
                         <div className="footer-links">
                             <div className="link-column">
-                                <a href="#" className="link-item">سوالات متداول</a>
-                                <a href="#" className="link-item">درباره ما</a>
+                                <a href="#" className="link-item">{translate("questions")}</a>
+                                <a href="#" className="link-item"></a>
                                 <a href="#" className="link-item">تماس با ما</a>
                                 <a href="#" className="link-item">همکاری با ما</a>
                                 <a href="#" className="link-item">حریم خصوصی</a>
@@ -68,10 +68,10 @@ const Footer = (props: Props) => {
 
                         <div className="footer-links">
                             <div className="link-column">
-                                <a href="#" className="link-item">بروکرها</a>
-                                <a href="#" className="link-item">صرافی‌ها</a>
-                                <a href="#" className="link-item">پرایم‌فرم‌ها</a>
-                                <a href="#" className="link-item">اپراتورها</a>
+                                <a href="#" className="link-item">{translate("brokers")}</a>
+                                <a href="#" className="link-item">{translate("exchange")}</a>
+                                <a href="#" className="link-item">{translate("propforms")}</a>
+                                <a href="#" className="link-item">{translate("operators")}</a>
                             </div>
                             <div className="link-column">
                                 <a href="#" className="link-item">تحلیل و اخبار</a>

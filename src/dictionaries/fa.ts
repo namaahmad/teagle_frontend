@@ -91,5 +91,17 @@ export default {
     teagleJameh:"از زبان جامعه تیگل",
     commentRegister:"ثبت نظر",
     teagleMagDesc:"اخرین مقالات تیگل",
-    articleTeagle:"مقالات تیگل"
+    articleTeagle:"مقالات تیگل",
+    scamAlert:"هشدار کلاه برداری",
+    fRUADCUTION:"FRUAD CUTION",
+    more:"بیشتر",
+    moreView:"مشاهده بیشتر",
+    registerDone:"!ثبت نام کن",
+    registerDoneDesc:"با ثبت نام در تیگل معنوی توکل بازارهای جهانی فعالیت کنی",
+    confirm:"تایید",
+    mail:"ایمیل",
+    operators:"اپراتور ها",
+    questions:"سوالات متداول",
+    :"درباره ما",
+    :""
 } as const;

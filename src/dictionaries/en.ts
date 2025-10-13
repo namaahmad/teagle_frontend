@@ -91,5 +91,15 @@ export default {
   teagleJameh:"teagle Jameh",
   commentRegister:"comment Register",
   teagleMagDesc:"teagle Mag Desc",
-  articleTeagle:"article Teagle"
+  articleTeagle:"article Teagle",
+  scamAlert:"scam Alert",
+   fRUADCUTION:"FRUAD CUTION",
+   more:"more",
+   moreView:"more View",
+   registerDone:"register Done",
+   registerDoneDesc:"register Done Desc",
+   confirm:"confirm",
+   mail:"mail",
+   operators:"operators",
+   questions:"questions",
 } as const;
