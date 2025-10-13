@@ -22,7 +22,7 @@ const Section2Component = (props: IProps) => {
                             <span className="yellow-dot">
                                 ■
                             </span>
-                            نبض بازار
+                            {translate("nabzBazar")}
                         </div>
                         <div className="section-subtitle" style={{ marginBottom: "2.5rem" }}>
                             {translate("exchangeDescription")}
@@ -37,13 +37,13 @@ const Section2Component = (props: IProps) => {
                                 </div>
                                 <button className="sidebar-btn">
 
-                                    پلتفرم ها
+                                   {translate("plateforms")}
                                     <i className="fas fa-arrow-left">
                                     </i>
                                 </button>
                                 <button className="sidebar-btn">
 
-                                    صرافی ها
+                                    {translate("exchange")}
                                     <i className="fas fa-arrow-left">
                                     </i>
                                 </button>

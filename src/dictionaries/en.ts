@@ -112,5 +112,6 @@ export default {
   disclaimer: "disclaimer",
   disclaimerDesc: "disclaimer Desc",
   teagleEye: "TRADER S SHARP EYE",
-  searchPlaceholder:"search Placeholder"
+  searchPlaceholder:"search Placeholder",
+  nabzBazar:"nabzBazar"
 } as const;
