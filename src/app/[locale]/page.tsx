@@ -61,8 +61,8 @@ export default async function HomePage(props: IProps) {
      <Section8Component />
     <Section9Component />
        <Section10Component />
-        {/*<Section11Component />
-      <Section12Component /> */}
+        <Section11Component />
+     {/* <Section12Component /> */}
     </>
   )
 }

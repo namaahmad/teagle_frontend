@@ -1,36 +1,4 @@
-        .container11 {
-            width: 1440px;
-            margin: 0 auto;
-            padding-top: 60px;
-            position: relative;
-        }
-        .header11 {
-            margin-bottom: 32px;
-            margin-right: 320px;
-        }
-        .header11-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #222;
-            display: flex;
-            align-items: center;
-        }
-        .header11-title .icon {
-            color: #FFD600;
-            font-size: 20px;
-            margin-left: 8px;
-        }
-        .header11-title .fa-file-alt {
-            color: #888;
-            font-size: 18px;
-            margin-left: 8px;
-        }
-        .header11-subtitle {
-            font-size: 16px;
-            color: #B3B3B3;
-            margin-top: 8px;
-            font-weight: 400;
-        }
+
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);

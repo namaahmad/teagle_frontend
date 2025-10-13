@@ -90,5 +90,6 @@ export default {
   trainingCourse: "training Course",
   teagleJameh:"teagle Jameh",
   commentRegister:"comment Register",
-  teagleMagDesc:"teagle Mag Desc"
+  teagleMagDesc:"teagle Mag Desc",
+  articleTeagle:"article Teagle"
 } as const;

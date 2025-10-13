@@ -90,5 +90,6 @@ export default {
     trainingCourseDesc:"گام به گام از سطوح پایه تا پیشرفته",
     teagleJameh:"از زبان جامعه تیگل",
     commentRegister:"ثبت نظر",
-    teagleMagDesc:"اخرین مقالات تیگل"
+    teagleMagDesc:"اخرین مقالات تیگل",
+    articleTeagle:"مقالات تیگل"
 } as const;
