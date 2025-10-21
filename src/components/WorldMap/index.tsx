@@ -82,9 +82,9 @@ export default function WorldMap({ markers = sampleMarkers }: { markers?: Marker
         </ZoomableGroup>
       </ComposableMap>
 
-      <div style={{ marginTop: 8, minHeight: 20 }}>
+      {/* <div style={{ marginTop: 8, minHeight: 20 }}>
         {tooltip ? <strong>Country: {tooltip}</strong> : "Hover a country"}
-      </div>
+      </div> */}
     </div>
   );
 }

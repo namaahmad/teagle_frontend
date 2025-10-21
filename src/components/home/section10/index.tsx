@@ -1,123 +1,60 @@
 "use client"
 import React, { useState } from 'react'
-import Link, { LinkProps } from 'next/link';
-import { BrokenImage as BrokenImageIcon } from "@mui/icons-material"
+
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
-import "./style.css"
-import Image from 'next/image';
-import section10Img from "@/components/img/section10.svg"
 
 interface IProps {
 }
 const Section10Component = (props: IProps) => {
     const translate = useI18n();
     return (
-        <section className="container-fluid" >
+        <section className="section " id="teagle-mag">
+        <header className="header">
+          <div className="title-wrapper">
+            <div className="icon">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_2176_1668)">
+                  <path
+                    d="M12 2.56836L0 0.0117188V24.0117L12 21.4551L24 24.0117V0.0117188L12 2.56836ZM13.9275 3.66934L22.0425 1.94028C20.1062 6.12248 16.8456 9.57337 12.75 11.7753V5.12501C12.7471 4.78614 12.8626 4.45661 13.0769 4.1916C13.2913 3.92658 13.5916 3.74219 13.9275 3.66934ZM11.25 5.11024V12.5511C8.69912 13.76 5.95702 14.5297 3.1425 14.827C2.93388 14.8466 2.72343 14.8229 2.52466 14.7575C2.32589 14.6921 2.14323 14.5863 1.98848 14.4471C1.83373 14.3078 1.71029 14.1382 1.62616 13.9491C1.54203 13.76 1.49905 13.5556 1.5 13.3491V1.84424L10.065 3.66934C10.3998 3.74018 10.6999 3.92177 10.9155 4.18389C11.131 4.446 11.2491 4.77288 11.25 5.11024ZM12 19.9403L1.5 22.157V16.3935C10.1925 16.1201 18.5625 11.2211 22.5 4.35655V22.157L12 19.9403Z"
+                    fill="#262626" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2176_1668">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.0117188)" />
+                  </clipPath>
+                </defs>
+              </svg>
 
-            <div className="row justify-content-center">
-                <div className="col-12 col-lg-10">
-                    <div className="section-title" style={{ marginBottom: "0.2rem" }}>
-                        <div style={{ marginLeft: "20px" }}>
-                            <BrokenImageIcon />
-                        </div>
-
-                        {translate("teagleMag")}
-                        <div className="logo-badge"><i className='fas fa-chevron-left'> </i></div>
-                    </div>
-                    <div className="section-subtitle" >
-                        {translate("teagleMagDesc")}
-                    </div>
-                    <div className="main-content-wrapper">
-                        <div className="container-fluid px-4 px-md-5 py-4" >
-                            <div className="row g-4 justify-content-center">
-                                <div className="col-12 col-md-4 d-flex">
-                                    <div className="card-custom w-100">
-                                        <img alt="تصویر یک زن نشسته پشت میز کار با گیاه و تابلو در پس‌زمینه" src="https://placehold.co/600x600/222/fff?text=&amp;font=roboto" />
-                                        <div className="overlay">
-                                        </div>
-                                        <div className="card-content-custom left">
-                                            <div className="card-title-custom">
-                                                تحلیل هفتگی
-                                            </div>
-                                            <button className="card-btn-custom">
-                                                <i className="fas fa-chevron-left">
-                                                </i>
-                                                مشاهده بیشتر
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div className="col-12 col-md-4 d-flex">
-                                  
-                                    <div className="row">
-                                        <div className="col-12 mb-2">
-                                            <div className="card-custom w-100">
-                                                <img alt="تصویر سکه‌های طلا که در هوا پخش شده‌اند و یک کیف پول طلایی" src="https://placehold.co/600x600/FFD333/181818?text=&amp;font=roboto" />
-                                                <div className="overlay">
-                                                </div>
-                                                <div className="card-content-custom mt-4 left">
-                                                    <div className="card-title-custom">
-                                                        تیگل آی
-                                                    </div>
-                                                    <button className="card-btn-custom">
-                                                        <i className="fas fa-chevron-left">
-                                                        </i>
-                                                        مشاهده بیشتر
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                           <Image alt={translate("teagleMag")} src={section10Img}/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-md-4 d-flex">
-                                    <div className="card-custom w-100">
-                                        <img alt="تصویر شمش طلا و سکه‌های طلا روی هم چیده شده در پس‌زمینه تار و طلایی" src="https://placehold.co/600x600/gold/fff?text=&amp;font=roboto" />
-                                        <div className="overlay">
-                                        </div>
-                                        <div className="card-content-custom center">
-                                            <div className="card-title-custom">
-                                                به روایت تیگل
-                                            </div>
-                                            <button className="card-btn-custom">
-                                                <i className="fas fa-chevron-left">
-                                                </i>
-                                                مشاهده بیشتر
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-
-                            <div className="motion-class mb-4 mt-4">
-                                <img alt="تصویر دست فردی که با خودکار روی نمودارهای مالی و داده‌های آماری کار می‌کند، نمودارهای زرد رنگ در پیش‌زمینه" src="https://placehold.co/1800x300/FFD333/181818?text=&amp;font=roboto" />
-                                <div className="motion-overlay">
-                                </div>
-                                <div className="motion-content">
-                                    <div className="motion-title">
-                                        کلاس موشن
-                                    </div>
-                                    <div className="motion-play">
-                                        <i className="fas fa-play">
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div className="ads-bar">
-                ADS
+            <h2 className="title">تیگل مگ</h2>
+            <span className="icon-arrow"></span>
+          </div>
+          <p className="description">
+            آخرین مقالات تیگل</p>
+        </header>
+        <main>
+          <div className="top">
+            <a href="">
+              <img src="assets/m1.png" alt="" />
+            </a>
+            <div className="col">
+              <a href="">
+                <img src="assets/m2.png" alt="" />
+              </a>
+              <img src="assets/mag.png" alt="" />
             </div>
-        </section >
+            <a href="">
+              <img src="assets/m3.png" alt="" />
+
+            </a>
+          </div>
+          <a href="">
+            <img src="assets/m4.png" alt="" />
+
+          </a>
+        </main>
+
+      </section>
     )
 }
 export default Section10Component

@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "npm run build && next export",
     "docker_build_local": "sudo docker build -t ds_ai_plateform_dashboard_local:0.0.1 --build-arg REACT_APP_API_URL=http://192.168.1.116:8000 --build-arg REACT_APP_WEBSOCKET=http://192.168.1.116:8000/bpmnProcessRun .",
-    "docker_build": "docker build -t ds_ai_plateform_site:0.0.1 --build-arg NEXT_PUBLIC_BASE_URL=http://ds-ai-plateform-core/api/v1 --build-arg  NEXT_PUBLIC_BASE_URL_CLIENT=https://softdev.ir/api/v1 .",
+    "docker_build": "docker build -t teagle_site:0.0.1 --build-arg NEXT_PUBLIC_BASE_URL=http://ds-ai-plateform-core/api/v1 --build-arg  NEXT_PUBLIC_BASE_URL_CLIENT=https://softdev.ir/api/v1 .",
     "docker_compose": "sudo docker-compose -f docker-compose.yaml up -d"
   },
   "dependencies": {

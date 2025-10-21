@@ -1,0 +1,126 @@
+footer {
+    background: #636363;
+    padding-inline: 240px;
+    padding-block: 76px 90px;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-mid);
+
+    .top {
+        display: flex;
+
+        >* {
+            flex: 1;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .start,
+        .end {
+            display: flex;
+            gap: var(--gap-mid);
+
+            ul {
+                list-style: none;
+
+                li {
+
+                    /* padding-bottom: 16px; */
+                    a {
+                        display: inline-block;
+                        color: var(--text-color-light);
+                        padding-block: 10px;
+                    }
+
+                    a:hover {
+                        color: var(--color-yellow)
+                    }
+
+                }
+
+                li::before {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-inline-end: 8px;
+                    background: var(--color-yellow);
+
+                }
+            }
+
+            ul.social-media-list {
+                margin-inline-start: auto;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    aspect-ratio: 1/1;
+                    background-color: var(--color-yellow);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    padding: 8px;
+                    margin-bottom: 10px;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        filter: grayscale(1) contrast(100) brightness(0);
+                    }
+                }
+
+                li:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-mid);
+
+        .disclaimer {
+            align-items: end;
+            gap: var(--gap-mid);
+
+            p:first-child {
+                flex: unset;
+            }
+
+            strong {
+                font-size: 26px;
+                line-height: 28px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+
+        .copy-write {
+            background-color: var(--color-yellow);
+            padding: 14px var(--gap-mid);
+            border-radius: 20px;
+            color: #3d3d3d;
+            font-weight: bold;
+
+            p:last-child {
+                text-align: end;
+            }
+        }
+    }
+}

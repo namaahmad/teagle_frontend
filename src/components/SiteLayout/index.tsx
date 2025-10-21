@@ -18,10 +18,8 @@ function SiteLayout(props: IProps) {
     const user = null;
 
     return (
-        <main
-            className={`antialiased`}
-        >
-            <ToastContainer/>
+        <>
+            <ToastContainer />
             <Provider locale={props.local} >
 
                 <UserProvider user={user}>
@@ -31,7 +29,7 @@ function SiteLayout(props: IProps) {
                     <Footer />
                 </UserProvider>
             </Provider>
-        </main>
+        </>
 
     );
 }
