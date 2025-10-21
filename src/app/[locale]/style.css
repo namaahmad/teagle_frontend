@@ -225,7 +225,7 @@ body>main>#platforms-ads {
                         height: 55px;
                         position: relative;
                         transition: .3s;
-                        font: 20px;
+                        font: 20px !important;
                         font-weight: 600;
                         background: #767676;
 

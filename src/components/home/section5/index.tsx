@@ -3,12 +3,26 @@ import React, { useState } from 'react'
 import Link, { LinkProps } from 'next/link';
 
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/navigation";
+import BitycleWidget from './BitycleWidget';
 interface IProps {
 }
 const Section5Component = (props: IProps) => {
     const translate = useI18n();
-
+    const widgets = [
+        { id: "btc-widget", symbol: "BTCUSDT" },
+        { id: "eth-widget", symbol: "ETHUSDT" },
+        { id: "doge-widget", symbol: "DOGEUSDT" },
+        { id: "ada-widget", symbol: "ADAUSDT" },
+        { id: "SOLUSDT", symbol: "SOLUSDT" },
+        { id: "TRXUSDT", symbol: "TRXUSDT" },
+        { id: "BNBUSDT", symbol: "BNBUSDT" },
+        { id: "XRPUSDT", symbol: "XRPUSDT" },
+        { id: "USDCUSDT", symbol: "USDCUSDT" },
+    ];
     return (
         <>
             <section className="section" id="teagle-cast">
@@ -105,16 +119,16 @@ const Section5Component = (props: IProps) => {
 
 
                         </div>
-                        <h2 className="title">قیمت‌های لحظه ای</h2>
+                        <h2 className="title">{translate("instantPrices")}</h2>
                         <span className="icon-arrow"></span>
                     </div>
                     <p className="description">
-                        قیمت‌های لحظه ای رمزارز
+                        {translate("instantPricesDesc")}
                     </p>
                 </header>
                 <main>
                     <div className="list-wrapper">
-                        <button className="direction-list-button">
+                        <button className="direction-list-button" id="swiper-button-prev">
                             <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M1.93762 -8.52822e-07L14 12L1.93762 24L0.0136469 22.086L6.03119 16.086C8.2963 13.8326 8.2963 10.1674 6.03119 7.91403L-2.34685e-08 1.91403L1.92398 -8.51629e-07L1.93762 -8.52822e-07Z"
@@ -123,39 +137,27 @@ const Section5Component = (props: IProps) => {
 
                         </button>
                         <ul className="list-horizontal-scroll">
-                            {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
-                                <li key={index} className="card-price">
-                                    <div className="header">
-                                        <p className="currency-name">بیت کوین</p>
-                                        <div className="row">
-                                            <p className="currency-name-en">BTC</p>
-                                            <img className="exchange-log" src="assets/Binance_logo.png" />
-                                        </div>
-                                        <div className="row">
-                                            <p className="price">115,522.32</p>
-                                            <p className="price-unit">USDT</p>
-                                            <div className="persentage growth">
+                            <Swiper
+                                modules={[Navigation]}
 
-                                                ۰.۲۳٪
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="chart">
-                                        <svg viewBox="0 0 200 80" preserveAspectRatio="none">
-                                            <polyline
-                                                fill="none"
-                                                stroke="#f97316"
-                                                strokeWidth="2"
-                                                points="0,48 20,43 40,46 60,34 80,39 100,26 120,31 140,24 160,27 180,19 200,24"
-                                            />
-                                        </svg>
-                                    </div>
-                                </li>
-                            ))}
-
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                navigation={{ nextEl: "#swiper-button-next", prevEl: "#swiper-button-prev" }}
+                                breakpoints={{
+                                    640: { slidesPerView: 1 },
+                                    768: { slidesPerView: 2 },
+                                    1024: { slidesPerView: 5 },
+                                }}
+                               className="p-4"
+                            >
+                                {widgets.map((w, index) => (
+                                    <SwiperSlide key={index}>
+                                        <BitycleWidget symbol={w.symbol} id={w.id} />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </ul>
-                        <button className="direction-list-button forward">
+                        <button className="direction-list-button forward" id="swiper-button-next">
                             <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M1.93762 -8.52822e-07L14 12L1.93762 24L0.0136469 22.086L6.03119 16.086C8.2963 13.8326 8.2963 10.1674 6.03119 7.91403L-2.34685e-08 1.91403L1.92398 -8.51629e-07L1.93762 -8.52822e-07Z"
@@ -166,7 +168,7 @@ const Section5Component = (props: IProps) => {
                 </main>
                 <header className="header">
                     <p className="description">
-                        قیمت‌های لحظه ای ارز رسمی
+                        {translate("instantPricesDesc1")}
                     </p>
                 </header>
                 <main>

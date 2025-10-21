@@ -18,9 +18,9 @@ type MarkerType = {
 };
 
 const sampleMarkers: MarkerType[] = [
-  { id: "btc", name: "Bitcoin (NY)", coordinates: [-74.006, 40.7128] },
-  { id: "eth", name: "Ethereum (London)", coordinates: [-0.1276, 51.5074] },
-  { id: "tokyo", name: "Tokyo Node", coordinates: [139.6917, 35.6895] },
+  // { id: "btc", name: "Bitcoin (NY)", coordinates: [-74.006, 40.7128] },
+  // { id: "eth", name: "Ethereum (London)", coordinates: [-0.1276, 51.5074] },
+  // { id: "tokyo", name: "Tokyo Node", coordinates: [139.6917, 35.6895] },
 ];
 
 export default function WorldMap({ markers = sampleMarkers }: { markers?: MarkerType[] }) {

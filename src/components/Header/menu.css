@@ -122,8 +122,7 @@ nav>ul {
             padding-inline: var(--padding-menu);
             align-items: center;
             font-size: 16px;
-            font-weight: bold;
-
+            font-weight: 700;
             @media (max-width:1500px) {
                 width: 100%;
             }
