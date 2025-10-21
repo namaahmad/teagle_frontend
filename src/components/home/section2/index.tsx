@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Link, { LinkProps } from 'next/link';
 
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
-import "./style.css"
 
 interface IProps {
 }
@@ -12,816 +11,127 @@ const Section2Component = (props: IProps) => {
     const local = useCurrentLocale()
     const translate = useI18n();
     return (
-        <section >
-            <div className="container-fluid" style={{ paddingTop: "2.5rem", paddingBottom: 0 }}>
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-10">
-                        <div className="section-title" style={{ marginBottom: "0.2rem" }}>
-                            <i className="fas fa-arrow-left">
-                            </i>
-                            <span className="yellow-dot">
-                                ■
-                            </span>
-                            {translate("nabzBazar")}
-                        </div>
-                        <div className="section-subtitle" style={{ marginBottom: "2.5rem" }}>
-                            {translate("exchangeDescription")}
-                        </div>
-                        <div className="main-content-wrapper">
-                            <div className="brokers-sidebar">
-                                <div className="active sidebar-title">
+        <section id="market-bit" className="section">
+            <header className="header">
+                <div className="title-wrapper">
+                    <div className="icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clipPath="url(#clip0_2176_1175)">
+                                <path
+                                    d="M17.5 0.00012207C14.6322 0.00012207 11.8288 0.850547 9.44425 2.44383C7.05974 4.03711 5.20124 6.30169 4.10377 8.95122C3.0063 11.6007 2.71913 14.5162 3.27861 17.3289C3.8381 20.1417 5.21908 22.7253 7.24694 24.7532C9.2748 26.781 11.8585 28.162 14.6712 28.7215C17.4839 29.281 20.3994 28.9938 23.0489 27.8964C25.6984 26.7989 27.963 24.9404 29.5563 22.5559C31.1496 20.1714 32 17.3679 32 14.5001C32 10.6545 30.4723 6.96637 27.7531 4.24709C25.0338 1.52781 21.3456 0.00012207 17.5 0.00012207ZM4.94846 16.3579C4.71111 14.7859 4.77877 13.1828 5.14781 11.6364C5.74752 9.08238 7.12421 6.7771 9.08832 5.0379C11.0524 3.2987 13.5073 2.21113 16.1151 1.92491C18.7229 1.63869 21.3554 2.1679 23.6499 3.43968C25.9445 4.71146 27.7884 6.66328 28.9278 9.02639L29.0094 9.19858L28.9006 9.3617C27.5694 11.3338 26.0122 13.1435 24.2606 14.7539C24.0954 14.8996 23.8828 14.9801 23.6625 14.9804H23.5175C23.3806 14.9584 23.2506 14.9053 23.1375 14.8252C23.0244 14.7451 22.9312 14.6401 22.865 14.5183L21.125 11.4642L20.2822 12.1711C16.4806 15.3479 11.8354 17.3476 6.91501 17.9257H6.70659C6.27116 17.9162 5.85291 17.754 5.52493 17.4674C5.19695 17.1808 4.98006 16.7882 4.91217 16.3579H4.94846ZM17.636 27.1786H17.4638C15.1435 27.1573 12.8731 26.5029 10.8975 25.2859C8.92191 24.0689 7.31617 22.3356 6.25346 20.273L6.01783 19.8289L6.52533 19.7836C11.3198 19.3419 15.9124 17.6411 19.8381 14.8536C19.9435 14.7757 20.0645 14.7216 20.1928 14.695C20.3211 14.6684 20.4536 14.6699 20.5813 14.6995C20.7048 14.7259 20.821 14.7794 20.9213 14.8562C21.0216 14.933 21.1035 15.0312 21.1612 15.1436L22.8741 18.2611L23.7169 17.5995C25.2795 16.3683 26.721 14.9906 28.0215 13.4851C28.1881 13.2933 28.4091 13.1567 28.6552 13.0936C28.9012 13.0304 29.1607 13.0437 29.3991 13.1317C29.6357 13.2126 29.8414 13.365 29.9875 13.568C30.1337 13.771 30.2131 14.0144 30.2147 14.2645C30.2424 15.7789 29.9745 17.2841 29.4262 18.6961C28.5333 21.1385 26.9242 23.2546 24.8094 24.768C22.6946 26.2814 20.1724 27.1215 17.5725 27.1786H17.636Z"
+                                    fill="#262626" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2176_1175">
+                                    <rect width="32" height="31.99" fill="white" transform="translate(0 0.00500488)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 className="title">نبض بازار</h2>
+                    <span className="icon-arrow"></span>
+                </div>
+                <p className="description">
+                    تمامی خدمات ذکر شده با قیمت‌های استثنایی عرضه می‌شود.
+                </p>
+            </header>
+            <main>
+                <ul>
+                    <li>
+                        <label htmlFor="bit-content-brokers">
+                            <input type="radio" name="show-bit-content" defaultChecked id="bit-content-brokers" />
+                            <div className="button">
+                                <p>بروکرها</p>
+                                <svg className="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clipPath="url(#clip0_2176_1144)">
+                                        <path
+                                            d="M11.7961 15.364L6.43201 9.99994L11.7961 4.63586L12.6517 5.49145L9.8604 8.28271C8.9138 9.22931 8.9138 10.7645 9.8604 11.7172L12.6517 14.5084L11.7961 15.364Z"
+                                            fill="#FBCA2B" />
+                                        <path
+                                            d="M16.0558 20H3.94418C1.76578 20 0 18.2342 0 16.0558V3.94418C0 1.76578 1.76578 0 3.94418 0H16.0558C18.2342 0 20 1.76578 20 3.94418V16.0558C20 18.2342 18.2342 20 16.0558 20ZM3.64078 18.7864H16.3592C17.7002 18.7864 18.7864 17.7002 18.7864 16.3592V3.64078C18.7864 2.29976 17.7002 1.21359 16.3592 1.21359H3.64078C2.29976 1.21359 1.21359 2.29976 1.21359 3.64078V16.3592C1.21359 17.7002 2.29976 18.7864 3.64078 18.7864Z"
+                                            fill="#FBCA2B" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2176_1144">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
 
-                                    {translate("brokers")}
-                                    <i className="fas fa-arrow-left">
-                                    </i>
-                                </div>
-                                <button className="sidebar-btn">
+                        </label>
+                    </li>
+                    <li>
+                        <label htmlFor="bit-content-prof">
+                            <input type="radio" name="show-bit-content" id="bit-content-prof" />
+                            <div className="button">
+                                <p>پراپفرم‌ها</p>
+                                <svg className="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clipPath="url(#clip0_2176_1144)">
+                                        <path
+                                            d="M11.7961 15.364L6.43201 9.99994L11.7961 4.63586L12.6517 5.49145L9.8604 8.28271C8.9138 9.22931 8.9138 10.7645 9.8604 11.7172L12.6517 14.5084L11.7961 15.364Z"
+                                            fill="#FBCA2B" />
+                                        <path
+                                            d="M16.0558 20H3.94418C1.76578 20 0 18.2342 0 16.0558V3.94418C0 1.76578 1.76578 0 3.94418 0H16.0558C18.2342 0 20 1.76578 20 3.94418V16.0558C20 18.2342 18.2342 20 16.0558 20ZM3.64078 18.7864H16.3592C17.7002 18.7864 18.7864 17.7002 18.7864 16.3592V3.64078C18.7864 2.29976 17.7002 1.21359 16.3592 1.21359H3.64078C2.29976 1.21359 1.21359 2.29976 1.21359 3.64078V16.3592C1.21359 17.7002 2.29976 18.7864 3.64078 18.7864Z"
+                                            fill="#FBCA2B" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2176_1144">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
 
-                                   {translate("plateforms")}
-                                    <i className="fas fa-arrow-left">
-                                    </i>
-                                </button>
-                                <button className="sidebar-btn">
+                        </label>
+                    </li>
+                    <li>
+                        <label htmlFor="bit-content-saraf">
+                            <input type="radio" name="show-bit-content" id="bit-content-saraf" />
+                            <div className="button">
+                                <p>صرافی‌ها</p>
+                                <svg className="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clipPath="url(#clip0_2176_1144)">
+                                        <path
+                                            d="M11.7961 15.364L6.43201 9.99994L11.7961 4.63586L12.6517 5.49145L9.8604 8.28271C8.9138 9.22931 8.9138 10.7645 9.8604 11.7172L12.6517 14.5084L11.7961 15.364Z"
+                                            fill="#FBCA2B" />
+                                        <path
+                                            d="M16.0558 20H3.94418C1.76578 20 0 18.2342 0 16.0558V3.94418C0 1.76578 1.76578 0 3.94418 0H16.0558C18.2342 0 20 1.76578 20 3.94418V16.0558C20 18.2342 18.2342 20 16.0558 20ZM3.64078 18.7864H16.3592C17.7002 18.7864 18.7864 17.7002 18.7864 16.3592V3.64078C18.7864 2.29976 17.7002 1.21359 16.3592 1.21359H3.64078C2.29976 1.21359 1.21359 2.29976 1.21359 3.64078V16.3592C1.21359 17.7002 2.29976 18.7864 3.64078 18.7864Z"
+                                            fill="#FBCA2B" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2176_1144">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
 
-                                    {translate("exchange")}
-                                    <i className="fas fa-arrow-left">
-                                    </i>
-                                </button>
-                            </div>
-                            <div className="market-card">
-                                <div className="date">
-                                    1403/04/18
-                                </div>
-                                <div className="card-title">
-                                    بروکر مونتا ماکسس همکاری استراتژیک خود را با FX Blue آغاز کرد.
-                                </div>
-                                <div className="card-text">
-                                    بروکر مونتا ماکسس با اعلام همکاری رسمی خود با Blue FX، دسترسی کاربران به ابزارهای پیشرفته تحلیل و اتوماسیون معاملات را گسترش می‌دهد. این مشارکت جدید، فرصت‌های توانایی برای معامله‌گران فراهم می‌کند تا با استفاده از سیستم‌های تحلیل حرفه‌ای، کپی تریدینگ پیشرفته و ابزارهای معاملاتی نوین، استراتژی‌های خود را بهبود بخشند.
-                                </div>
-                                <div className="card-text">
-                                    این همکاری جدید، فرصت‌های توانایی برای معامله‌گران فراهم می‌کند تا با استفاده از سیستم‌های تحلیل حرفه‌ای، کپی تریدینگ پیشرفته و ابزارهای معاملاتی نوین، استراتژی‌های خود را بهبود بخشند. این مشارکت جدید، فرصت‌های توانایی برای معامله‌گران فراهم می‌کند تا با استفاده از سیستم‌های اخبار، هواهای کپی تریدینگ پیشرفته و ابزارهای معاملاتی نوین، استراتژی‌های خود را بهبود بخشند.
-                                </div>
-                                <a className="more-info" href="#">
-                                    اطلاعات بیشتر
-                                </a>
-                            </div>
-                        </div>
+                        </label>
+                    </li>
+
+                </ul>
+                <div className="content-box">
+                    <div className="header row">
+                        <h3 className="title">بروکر مونتا مارکتس همکاری استراتژیک خود را با FX Blue آغاز کرد.</h3>
+                        <div className="date-with-icon" style={{ flex: "unset" }}>۱۴۰۴/۰۴/۱۸</div>
                     </div>
+                    <p>بروکر مونتا مارکتس همکاری استراتژیک خود را با FX Blue آغاز کرد.
+
+                        بروکر مونتا مارکتس با اعلام همکاری رسمی خود با FX Blue، دسترسی کاربران به ابزارهای پیشرفته تحلیل
+                        و مانیتورینگ معاملات را گسترش می‌دهد. این مشارکت جدید، فرصت‌های تازه‌ای را برای معامله‌گران
+                        فراهم می‌کند تا با استفاده از سیستم‌های تحلیل حرفه‌ای، کپی تریدینگ پیشرفته و ابزارهای معاملاتی
+                        نوین، استراتژی‌های خود را بهبود بخشند.
+                        این مشارکت جدید، فرصت‌های تازه‌ای را برای معامله‌گران فراهم می‌کند تا با استفاده از سیستم‌های
+                        تحلیل حرفه‌ای، کپی تریدینگ پیشرفته و ابزارهای معاملاتی نوین، استراتژی‌های خود را بهبود بخشند.
+                        این مشارکت جدید، فرصت‌های تازه‌ای را برای معامله‌گران فراهم می‌کند تا با استفاده از سیستم‌های
+                        تحلیل حرفه‌ای، کپی تریدینگ پیشرفته و ابزارهای معاملاتی نوین، استراتژی‌های خود را بهبود بخشند.
+                    </p>
                 </div>
-            </div>
-            <div className="section-divider">
-            </div>
-            <div className="container-fluid brokers-section">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-10">
-                        <div className="section-title" style={{ marginBottom: "0.2rem" }}>
-                            <i className="fas fa-globe">
-                            </i>
-                            <span className="yellow-dot">
-                                ■
-                            </span>
-                            {translate("brokers")}
-                        </div>
-                        <div className="section-subtitle" style={{ marginBottom: "2.5rem" }}>
-                            {translate("exchangeDescription")}
-                        </div>
-                        <div className="brokers-carousel-wrapper">
-                            <button className="carousel-arrow left">
-                                <i className="fas fa-chevron-right">
-                                </i>
-                            </button>
-                            <div className="brokers-cards-row">
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته آبی" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo+Blue" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }} >
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button className="carousel-arrow right">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <div className="section-divider">
-            </div>
-            <div className="container-fluid brokers-section">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-10">
-                        <div className="section-title" style={{ marginBottom: "0.2rem" }}>
-                            <i className="fas fa-globe">
-                            </i>
-                            <span className="yellow-dot">
-                                ■
-                            </span>
-                            {translate("exchange")}
-                        </div>
-                        <div className="section-subtitle" style={{ marginBottom: "2.5rem" }}>
-                            {translate("exchangeDescription")}
-                        </div>
-                        <div className="brokers-carousel-wrapper">
-                            <button className="carousel-arrow left">
-                                <i className="fas fa-chevron-right">
-                                </i>
-                            </button>
-                            <div className="brokers-cards-row">
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته آبی" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo+Blue" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }} >
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button className="carousel-arrow right">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <div className="section-divider">
-            </div>
-             <div className="container-fluid brokers-section">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-10">
-                        <div className="section-title" style={{ marginBottom: "0.2rem" }}>
-                            <i className="fas fa-globe">
-                            </i>
-                            <span className="yellow-dot">
-                                ■
-                            </span>
-                            {translate("propforms")}
-                        </div>
-                        <div className="section-subtitle" style={{ marginBottom: "2.5rem" }}>
-                            {translate("exchangeDescription")}
-                        </div>
-                        <div className="brokers-carousel-wrapper">
-                            <button className="carousel-arrow left">
-                                <i className="fas fa-chevron-right">
-                                </i>
-                            </button>
-                            <div className="brokers-cards-row">
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته آبی" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo+Blue" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }}>
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="broker-card">
-                                    <i className="far fa-comment-alt">
-                                    </i>
-                                    <img alt="لوگوی QPO finance با پس‌زمینه سفید و نوشته خاکستری" className="broker-logo" src="https://placehold.co/80x40?text=QPO+Logo" />
-                                    <div className="broker-title">
-                                        اوپوفایننس
-                                    </div>
-                                    <div className="broker-subtitle">
-                                        Opofinance
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "0.3rem" }} >
-                                        <span>
-                                            <i className="fas fa-fire">
-                                            </i>
-                                            <span className="info-label">
-                                                کالشر
-                                            </span>
-                                        </span>
-                                        <span className="info-label">
-                                            سال تاسیس
-                                        </span>
-                                        <span className="info-label">
-                                            حداقل واریز
-                                        </span>
-                                    </div>
-                                    <div className="broker-info" style={{ marginBottom: "1.1rem" }}>
-                                        <span className="info-value">
-                                        </span>
-                                        <span className="info-value">
-                                            2021
-                                        </span>
-                                        <span className="info-value">
-                                            $100
-                                        </span>
-                                    </div>
-                                    <div className="broker-actions">
-                                        <button className="btn broker-site">
-                                            سایت بروکر
-                                        </button>
-                                        <button className="btn">
-                                            بررسی بروکر
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button className="carousel-arrow right">
-                                <i className="fas fa-chevron-left">
-                                </i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </main>
         </section>
     )
 }

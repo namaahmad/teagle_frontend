@@ -3,108 +3,116 @@ import React, { useState } from 'react'
 import Link, { LinkProps } from 'next/link';
 
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
-import "./style.css"
-import section12_1Img from "@/components/img/section12_1.svg"
-import Image from 'next/image';
 interface IProps {
 }
 const Section12Component = (props: IProps) => {
 
     const translate = useI18n();
     return (
-        <section className="section12">
-            <div className="warning-section">
-                <div className="warning-content">
-                    <div className='row'>
-                        <div className='col-6'>
-                            <span className="warning-icon">
-                                <i className="fas fa-exclamation-triangle" style={{ fontSize: "5.2rem", color: "#FFD23B", border: "2px solid #fff", borderRadius: "10px", background: "#fff", padding: "3px 6px 3px 6px" }}>
-                                </i>
-                            </span>
-                        </div>
-                        <div className='col-6'>
-                            <div className="warning-title">
+        <>
+            <section id="scam-alert">
+                <div className="content">
+                    <div className="header">
+                        <img src="assets/alert.svg" alt="" />
+                        <div>
+                            <h3 className="title">
                                 {translate("scamAlert")}
-                            </div>
-                            <div className="warning-subtitle">
-                                {translate("fRUADCUTION")}
-
-                            </div>
+                            </h3>
+                            <h3 className="title">
+                                FRUAD CUTION
+                            </h3>
                         </div>
-
                     </div>
-
-                    <div className="warning-list">
-                        {[1, 1, 1].map((item, index) => (
-                            <div key={index} className="warning-item">
-                                <i className="fas fa-exclamation-triangle">
-                                </i>
-                                <span className='warning-list-text'>
-                                    <b>
-                                        لورم ایپسوم:
-                                    </b>
-                                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-                                </span>
-
-                                <button className="more-btn">
-                                    {translate("more")} <i className='fas fa-chevron-left' />
-                                </button>
-                            </div>
-                        ))}
-
-
-                    </div>
-                    <button className="view-more-btn">
-                        {translate("moreView")} <i className='fas fa-chevron-left' />
-                    </button>
-                    <br />
-                </div>
-                <div className="warning-illustration">
-                    <Image src={section12_1Img} alt={translate("scamAlert")} />
-                </div>
-            </div>
-            <div className="testimonial-section">
-                <div className="testimonial-box">
-
-                    <div className="testimonial-header">
-                        <div className='row col-12'>
-                            <div className='col-4 testimonial-avatar-col'>
-                                <span className="testimonial-quote">
-                                    ”
-                                </span>
-                                <span className="testimonial-avatar">
-                                    <img alt="عکس پروفایل مرد ایرانی با پس‌زمینه ساده، چهره جدی، نور طبیعی" src="https://placehold.co/44x44" style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover" }} />
-
-                                </span>
-
-                            </div>
-                            <div className='col-8'>
-                                <span className="testimonial-name">
-                                    رضا بیاتی
-                                </span>
-                                <br />
-                                <span className="testimonial-role">
-                                    مدیر شرکت تحلیل بازار
-                                </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div className="testimonial-text10">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
-                    </div>
-                    <ul className="testimonial-list">
+                    <ul>
                         <li>
-                            کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد.
+                            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.9614 19.0117H2.03857C1.35362 17.829 1.18494 17.5384 0.5 16.3557L9.96143 0.0117188C11.3262 0.0117188 11.6687 0.0117188 13.0386 0.0117188L22.5 16.3557C21.8151 17.5384 21.6464 17.829 20.9614 19.0117ZM4.27742 17.4823H18.7277C19.9085 17.4823 20.6445 16.2079 20.0567 15.1883L12.829 2.70853C12.2412 1.68894 10.7639 1.68894 10.171 2.70853L2.94842 15.1883C2.36059 16.2079 3.09665 17.4823 4.27742 17.4823Z"
+                                    fill="#FBCA2B" />
+                                <path d="M12.5121 5.63474H10.4879V11.8338H12.5121V5.63474Z" fill="#FBCA2B" />
+                                <path d="M12.5121 13.3122H10.4879V14.9945H12.5121V13.3122Z" fill="#FBCA2B" />
+                            </svg>
+                            <p><strong>لورم ایپسوم:</strong> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                است.</p>
+                            <button>بیشتر</button>
                         </li>
                         <li>
-                            تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.9614 19.0117H2.03857C1.35362 17.829 1.18494 17.5384 0.5 16.3557L9.96143 0.0117188C11.3262 0.0117188 11.6687 0.0117188 13.0386 0.0117188L22.5 16.3557C21.8151 17.5384 21.6464 17.829 20.9614 19.0117ZM4.27742 17.4823H18.7277C19.9085 17.4823 20.6445 16.2079 20.0567 15.1883L12.829 2.70853C12.2412 1.68894 10.7639 1.68894 10.171 2.70853L2.94842 15.1883C2.36059 16.2079 3.09665 17.4823 4.27742 17.4823Z"
+                                    fill="#FBCA2B" />
+                                <path d="M12.5121 5.63474H10.4879V11.8338H12.5121V5.63474Z" fill="#FBCA2B" />
+                                <path d="M12.5121 13.3122H10.4879V14.9945H12.5121V13.3122Z" fill="#FBCA2B" />
+                            </svg>
+                            <p><strong>لورم ایپسوم:</strong> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                است.</p>
+                            <button>بیشتر</button>
+                        </li>
+                        <li>
+                            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.9614 19.0117H2.03857C1.35362 17.829 1.18494 17.5384 0.5 16.3557L9.96143 0.0117188C11.3262 0.0117188 11.6687 0.0117188 13.0386 0.0117188L22.5 16.3557C21.8151 17.5384 21.6464 17.829 20.9614 19.0117ZM4.27742 17.4823H18.7277C19.9085 17.4823 20.6445 16.2079 20.0567 15.1883L12.829 2.70853C12.2412 1.68894 10.7639 1.68894 10.171 2.70853L2.94842 15.1883C2.36059 16.2079 3.09665 17.4823 4.27742 17.4823Z"
+                                    fill="#FBCA2B" />
+                                <path d="M12.5121 5.63474H10.4879V11.8338H12.5121V5.63474Z" fill="#FBCA2B" />
+                                <path d="M12.5121 13.3122H10.4879V14.9945H12.5121V13.3122Z" fill="#FBCA2B" />
+                            </svg>
+                            <p><strong>لورم ایپسوم:</strong> چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                است.</p>
+                            <button>بیشتر</button>
                         </li>
                     </ul>
+                    <a className="button">مشاهده بیشتر</a>
                 </div>
-            </div>
-        </section >
+            </section>
+            <section id="personnel-quotes">
+                <ul className="quot-list">
+                    <li className="quot-card">
+                        <q>
+                            <div className="header">
+                                <svg width="132" height="107" viewBox="0 0 132 107" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M96.6571 3.08977e-06C105.457 2.32043e-06 112.412 2.38714 117.522 7.16142C122.632 11.9357 126.322 17.8333 128.593 24.8543C130.864 31.8753 132 38.8963 132 45.9173C132 59.9593 128.877 72.4567 122.632 83.4095C116.103 94.6431 107.728 102.507 97.5088 107C91.8312 107 88.2827 103.349 86.8634 96.0472C95.6636 89.8688 101.625 84.252 104.748 79.1969C107.87 74.1417 109.432 67.9633 109.432 60.6614C109.432 56.168 108.438 53.0787 106.451 51.3937C104.464 49.9895 101.909 49.2874 98.7862 49.2874L92.399 49.2874C85.8698 49.2874 80.618 47.1811 76.6437 42.9685C72.6694 38.7559 70.6823 32.9987 70.6823 25.6969C70.6823 16.9908 73.2372 10.5315 78.347 6.31891C83.4568 2.1063 89.5602 3.71021e-06 96.6571 3.08977e-06ZM25.9749 9.26901e-06C34.7751 8.49967e-06 41.7301 2.38715 46.8399 7.16143C51.9497 11.9357 55.6401 17.8333 57.9112 24.8543C60.1822 31.8753 61.3177 38.8963 61.3177 45.9173C61.3177 59.9593 58.1951 72.4567 51.9497 83.4095C45.4205 94.6431 37.0461 102.507 26.8265 107C21.1489 107 17.6005 103.349 16.1811 96.0472C24.9813 89.8688 30.9427 84.252 34.0654 79.1969C37.188 74.1417 38.7494 67.9633 38.7494 60.6614C38.7494 56.168 37.7558 53.0788 35.7687 51.3937C33.7815 49.9895 31.2266 49.2874 28.104 49.2874L21.7167 49.2874C15.1875 49.2874 9.93575 47.1811 5.96145 42.9685C1.98715 38.7559 -6.4694e-06 32.9987 -7.10775e-06 25.6969C-7.86885e-06 16.9908 2.55491 10.5315 7.66473 6.31891C12.7745 2.10631 18.8779 9.88945e-06 25.9749 9.26901e-06Z"
+                                        fill="#FBCA2B" />
+                                </svg>
+                                <img className="profile-image" src="assets/profile.png" />
+                                <div className="personnel-name-position">
+                                    <p className="name">
+                                        رضا بیاتی
+                                    </p>
+                                    <p className="position">
+                                        مدیر شرکت تحلیل بازار
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                                است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                                تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+                                در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
+                                افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                                فارسی ایجاد کرد.
+                            </p>
+                        </q>
+
+
+                    </li>
+                </ul>
+            </section>
+            <section id="invite-to-register">
+                <div className="text">
+                    <p className="title">
+                        ثبت نام کن !
+                    </p>
+                    <p>با ثبت نام در تیگل میتونی تو کل بازار های جهانی فعالیت کنی</p>
+                </div>
+                <form className="input-wrapper">
+                    <input type="email" placeholder="ایمیل" />
+                    <button type="submit">تایید</button>
+                </form>
+
+            </section>
+        </>
     )
 }
 export default Section12Component
