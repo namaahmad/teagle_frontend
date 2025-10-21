@@ -1,9 +1,12 @@
 "use client"
 import React, { useState } from 'react'
-import Link, { LinkProps } from 'next/link';
-import { School as SchoolIcon } from "@mui/icons-material"
 import { useI18n, useCurrentLocale } from '@/dictionaries/client';
 import Image from 'next/image';
+import telegramIcon from "@/components/img/social_icons/telegram.svg"
+import instagramIcon from "@/components/img/social_icons/instagram.svg"
+import linkedinIcon from "@/components/img/social_icons/linkedin.svg"
+import youtubeIcon from "@/components/img/social_icons/youtube.svg"
+import aparatIcon from "@/components/img/social_icons/aparat.svg"
 import "./style.css"
 
 interface IProps {
@@ -131,36 +134,36 @@ const Section8Component = (props: IProps) => {
 
             </section>
             <section id="social-media">
-                <h3 className="title">به شبکه‌های اجتماعی ما بپیوندید</h3>
+                <h3 className="title">{translate("connectToWorld")} </h3>
                 <p>با ثبت نام در تگیل میتونی تو کل بازار های جهانی فعالیت کنی</p>
                 <ul className="social-media-list">
                     <li>
                         <a className="button" href="">
-                            <img src="assets/social_icons/telegram.svg" alt="" className="icon" />
+                            <Image src={telegramIcon} alt="" className="icon" />
                             <span>تلگرام</span>
                         </a>
                     </li>
                     <li>
                         <a className="button" href="">
-                            <img src="assets/social_icons/instagram.svg" alt="" className="icon" />
+                            <Image src={instagramIcon} alt="" className="icon" />
                             <span>اینستاگرام</span>
                         </a>
                     </li>
                     <li>
                         <a className="button" href="">
-                            <img src="assets/social_icons/linkedin.svg" alt="" className="icon" />
+                            <Image src={linkedinIcon} alt="" className="icon" />
                             <span>لینکدین</span>
                         </a>
                     </li>
                     <li>
                         <a className="button" href="">
-                            <img src="assets/social_icons/youtube.svg" alt="" className="icon" />
+                            <Image src={youtubeIcon} alt="" className="icon" />
                             <span>یوتیوب</span>
                         </a>
                     </li>
                     <li>
                         <a className="button" href="">
-                            <img src="assets/social_icons/aparat.svg" alt="" className="icon" />
+                            <Image src={aparatIcon} alt="" className="icon" />
                             <span>آپارات</span>
                         </a>
                     </li>

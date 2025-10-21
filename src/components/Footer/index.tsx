@@ -1,8 +1,15 @@
 "use client"
 import { useI18n } from '@/dictionaries/client';
 import React from 'react'
-import logoFooter from "@/components/img/logoFooter.png"
+import logox from "@/components/img/logox.png"
+import logox2 from "@/components/img/logox-2.png"
+import telegramIcon from "@/components/img/social_icons/telegram.svg"
+import instagramIcon from "@/components/img/social_icons/instagram.svg"
+import linkedinIcon from "@/components/img/social_icons/linkedin.svg"
+import youtubeIcon from "@/components/img/social_icons/youtube.svg"
+import aparatIcon from "@/components/img/social_icons/aparat.svg"
 import Image from 'next/image';
+
 import "./footer.css"
 type Props = {}
 
@@ -13,46 +20,46 @@ const Footer = (props: Props) => {
             <div className="top">
                 <div className="start">
                     <ul>
-                        <li><a href="">بروکرها</a></li>
-                        <li><a href="">صرافی‌ها</a></li>
-                        <li><a href="">پراپ‌فرم‌ها</a></li>
-                        <li><a href="">ابزارها</a></li>
+                        <li><a href="">{translate("brokers")}</a></li>
+                        <li><a href="">{translate("exchange")}</a></li>
+                        <li><a href="">{translate("propforms")}</a></li>
+                        <li><a href="">{translate("tools")}</a></li>
                     </ul>
                     <ul>
-                        <li><a href="">تحلیل و اخبار</a></li>
-                        <li><a href="">آموزش</a></li>
-                        <li><a href="">استاد تیگل</a></li>
-                        <li><a href="">تیگل‌مگ</a></li>
-                        <li><a href="">تیگل کست</a></li>
+                        <li><a href="">{translate("analysisAndNews")} </a></li>
+                        <li><a href="">{translate("education")}</a></li>
+                        <li><a href="">{translate("teagleMaster")}</a></li>
+                        <li><a href="">{translate("teagleMag")}</a></li>
+                        <li><a href=""> {translate("teagleCast")}</a></li>
                     </ul>
                 </div>
                 <div className="logo">
-                    <img src="assets/logox.png" alt="" />
-                    <img src="assets/logox-2.png" alt="" />
+                    <Image src={logox} alt="" />
+                    <Image src={logox2} alt="" />
                 </div>
                 <div className="end">
                     <ul>
-                        <li><a href="">سوالات متداول</a></li>
-                        <li><a href="">درباره ما</a></li>
-                        <li><a href="">تماس با ما</a></li>
-                        <li><a href="">همکاری با ما</a></li>
-                        <li><a href=""> حریم خصوصی</a></li>
+                        <li><a href="">{translate("questions")}</a></li>
+                        <li><a href="">{translate("aboutUs")}</a></li>
+                        <li><a href=""> {translate("contactUs")} </a></li>
+                        <li><a href=""> {translate("workUs")} </a></li>
+                        <li><a href=""> {translate("privacy")} </a></li>
                     </ul>
                     <ul className="social-media-list">
                         <li><a href="">
-                            <img src="assets/social_icons/telegram.svg" alt="" />
+                            <Image src={telegramIcon} alt="" />
                         </a></li>
                         <li><a href="">
-                            <img src="assets/social_icons/instagram.svg" alt="" />
+                            <Image src={instagramIcon} alt="" />
                         </a></li>
                         <li><a href="">
-                            <img src="assets/social_icons/linkedin.svg" alt="" />
+                            <Image src={linkedinIcon} alt="" />
                         </a></li>
                         <li><a href="">
-                            <img src="assets/social_icons/youtube.svg" alt="" />
+                            <Image src={youtubeIcon} alt="" />
                         </a></li>
                         <li><a href="">
-                            <img src="assets/social_icons/aparat.svg" alt="" />
+                            <Image src={aparatIcon} alt="" />
                         </a></li>
                     </ul>
                 </div>
@@ -61,16 +68,13 @@ const Footer = (props: Props) => {
             <div className="bottom">
                 <div className="row disclaimer">
                     <p><strong>
-                        سلب<br /> مسئولیت
+                        {translate("disclaimer1")}<br /> {translate("disclaimer2")}
                     </strong></p>
-                    <p>معاملات مربوط به بازارهای فارکس، آتی ها، آپشن ها، سهام ، ارزهای رمز نگاری شده یا هر بازار تجاری دیگر
-                        توام با سطح بالایی از خطر و ریسک می باشد که ممکن است برای همه سرمایه گذاران مناسب نباشد. همیشه این
-                        احتمال وجود دارد که شما بخشی یا تمام سرمایه گذاری اولیه خود را از دست بدهید. بنابراین شما نباید پولی
-                        را سرمایه گذاری کنید که توان از دست دادن آن را ندارید.وب سایت ما.</p>
+                    <p>{translate("disclaimerDesc")}</p>
                 </div>
                 <div className="copy-write row">
-                    <p>کلیه حقوق این سایت متعلق به تیگل می باشد</p>
-                    <p>طراحی و توسعه توسط : شرکت تیگل</p>
+                    <p>{translate("copyRight")}</p>
+                    <p>{translate("designBy")}</p>
                 </div>
             </div>
         </footer>

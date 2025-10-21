@@ -6,26 +6,26 @@ import { getCurrentLocale, getI18n } from "@/dictionaries/server";
 import { ApiServices } from "./api/ApiServices";
 import { BaseResponse, SiteSettingDto } from "@/dto";
 import SiteLayout from "@/components/SiteLayout";
-const IranSans = localFont({
+const Abar = localFont({
   src: [{
-    path: "../../../public/fonts/IRANSansWeb.ttf",
+    path: "../../../public/fonts/AbarMid-Regular.woff",
     style: "normal"
   },
   {
-    path: "../../../public/fonts/IRANSanBold.woff2",
+    path: "../../../public/fonts/AbarHigh-Regular.woff",
     style: "normal"
   },
   {
-    path: "../../../public/fonts/IranSans.woff2",
+    path: "../../../public/fonts/AbarLow-Regular.woff",
     style: "normal"
   },
   {
-    path: "../../../public/fonts/IRANSans-Bold-web.ttf",
+    path: "../../../public/fonts/AbarMid-SemiBold.woff",
     style: "bold"
   },
   {
-    path: "../../../public/fonts/IRANSans-Medium-web.ttf",
-    style: "normal"
+    path: "../../../public/fonts/AbarMid-Bold.woff",
+    style: "bold"
   },
   ]
 });
@@ -69,10 +69,10 @@ export default async function RootLayout(props: AppPropsWithLayout) {
       <body suppressHydrationWarning={true} >
         <style >{`
         html, body {
-          font-family: ${IranSans.style.fontFamily};
+          font-family: ${Abar.style.fontFamily};
         }
           a{
-           font-family: ${IranSans.style.fontFamily} !important;
+           font-family: ${Abar.style.fontFamily} !important;
           }
       `}</style>
         <SiteLayout local={locale} siteData={siteData}>

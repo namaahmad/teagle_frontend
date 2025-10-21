@@ -16,7 +16,7 @@ const Section1Component = (props: IProps) => {
                     <h1><span className="t-letter">T</span>eagle</h1>
                     <div className="slogan">
                         <p className="en-slogan">Trader &apos; s sharp eye</p>
-                        <p>تیگــل چشم تیز‌بین تریدر</p>
+                        <p>{translate("section1txt1")}</p>
                     </div>
                     <div className="search-box-wrapper">
                         <label className="search-box">
